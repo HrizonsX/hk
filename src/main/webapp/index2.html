@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>test</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script language="JavaScript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js" ></script>
+    <script language="JavaScript" src="https://cdn.bootcss.com/jquery-json/2.6.0/jquery.json.min.js"></script>
+    <script type="text/javascript" language="JavaScript">
+        function submitPassengerList() {
+            var bookParams = {};
+            var customerArray = new Array();
+            var p = document.getElementsByName("passID").length;
+            for (var i = 0; i < p; i++) {
+                var ptCode;
+                var obj = document.getElementsByName("ptCode"+i);
+                for (var j = 0; j < obj.length; j++) { //遍历Radio
+                    if (obj[j].checked) {
+                        ptCode = obj[j].value;
+                    }
+                }
+                var passName = document.getElementsByName("passName")[i].value;
+                var passID = document.getElementsByName("passID")[i].value;
+                var passPhone = document.getElementsByName("passPhone")[i].value;
+                var passPrice = document.getElementsByName("passPrice")[i].value;
+                customerArray.push({ptCode: ptCode, passName: passName, passID: passID, passPhone: passPhone, passPrice: passPrice});
+            }
+            bookParams.alCode = $("input[name='alCode']").val();
+            bookParams.fightDate = $("input[name='fightDate']").val();
+            bookParams.ssCode = $("input[name='ssCode']").val();
+            // bookParams.couponCode = $("input[name='couponCode']").val();
+            bookParams.bpCode = $("input[name='bpCode']").val();
+            bookParams.bookNumber = $("input[name='bookNumber']").val();
+            bookParams.bookTotal = $("input[name='bookTotal']").val();
+            alert(bookParams.alCode);
+            bookParams.passengerParams = customerArray;
+            $.ajax({
+                url: "./passengerTicket/bookTicket2.do",
+                type: "POST",
+                contentType : 'application/json;charset=utf-8', //设置请求头信息
+                dataType:"json",
+                //data: JSON.stringify(customerArray),    //将Json对象序列化成Json字符串，JSON.stringify()原生态方法
+                data: $.toJSON(bookParams),    //将Json对象序列化成Json字符串，toJSON()需要引用jquery.json.min.js
+            });
+        }
+    </script>
+</head>
+
+<body>
+<form method="post">
+    <input type="radio" name="ptCode0" value="1" checked="checked"/>成人
+    <input type="radio" name="ptCode0" value="2"/>小孩
+    <input type="text" name="passName"/></br>
+    <input type="text" name="passID"/></br>
+    <input type="text" name="passPhone"/></br>
+    <input type="text" name="passPrice"/></br>
+    <input type="radio" name="ptCode1" value="1" checked="checked"/>成人
+    <input type="radio" name="ptCode1" value="2"/>小孩
+    <input type="text" name="passName"/></br>
+    <input type="text" name="passID"/></br>
+    <input type="text" name="passPhone"/></br>
+    <input type="text" name="passPrice"/></br>
+    <input type="hidden" name="alCode" value="mh666"/>
+    <input type="hidden" name="fightDate" value="2019-1-2 10:00:00"/>
+    <input type="hidden" name="ssCode" value="1"/>
+    <input type="hidden" name="bpCode" value="1"/>
+<!--    <input type="hidden" name="couponCode" value="1"/>-->
+    <input type="hidden" name="bookNumber" value="2"/>
+    <input type="hidden" name="bookTotal" value="6800.00"/>
+    <input type="button" value="提交" onclick="submitPassengerList();"/>
+</form>
+
+
+</body>
+</html>

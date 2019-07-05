@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.mapper.BookPeopleMapper">
+    <resultMap id="bookPeopleMap" type="com.hk.pojo.BookPeople">
+        <id property="bpCode" column="bp_code"/>
+        <result property="bpPassword" column="bp_password"/>
+        <result property="bpName" column="bp_name"/>
+        <result property="bpPhone" column="bp_phone"/>
+        <result property="bpEmail" column="bp_email"/>
+    </resultMap> 
+    <select id="checkUser" resultMap="bookPeopleMap">
+        select bp_code, bp_name, bp_phone, bp_email from Book_People where bp_code=#{bpCode} and bp_password=#{bpPassword}
+    </select>
+    <select id="getUserInfo" parameterType="java.lang.String" resultMap="bookPeopleMap">
+        select bp_code, bp_name, bp_phone, bp_email from Book_People where bp_code=#{bpCode}
+    </select>
+    <insert id="addNewUser" parameterType="com.hk.pojo.BookPeople">
+        insert into Book_People(bp_code, bp_password, bp_name, bp_phone, bp_email) values(#{bpCode}, #{bpPassword}, #{bpName}, #{bpPhone}, #{bpEmail})
+    </insert>
+    <select id="checkBpCode" parameterType="java.lang.String" resultMap="bookPeopleMap">
+        select bp_code from Book_People where bp_code=#{bpCode}
+    </select>
+</mapper>

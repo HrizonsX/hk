@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.mapper.InsuranceOrderMapper">
+    <resultMap id="insuranceOrderMap" type="com.hk.pojo.InsuranceOrder">
+        <id property="bookCode" column="book_code"/>
+        <id property="bbCode" column="bb_code"/>
+        <id property="insuranceCode" column="insurance_code"/>
+        <result property="insuranceState" column="insurance_state"/>
+    </resultMap>
+    <insert id="addInsuranceOrder" parameterType="com.hk.pojo.InsuranceOrder" >
+        insert into Insurance_order(book_code, bb_code, insurance_code, insurance_state)
+        values(#{bookCode}, #{bbCode}, #{insuranceCode}, #{insuranceState})
+    </insert>
+    <select id="getInsuranceOrder" resultMap="insuranceOrderMap">
+        select book_code, bb_code, insurance_code, insurance_state from Insurance_order where book_code=#{bookCode} and bb_code=#{bbCode}
+    </select>
+    <update id="updateInsuranceState" >
+        update Insurance_order set insurance_state=1 where book_code=#{bookCode} and bb_code=#{bbCode}
+    </update>
+
+</mapper>

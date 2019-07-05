@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.mapper.BookMapper">
+    <resultMap id="bookMap" type="com.hk.pojo.Book">
+        <id property="bookCode" column="book_code"/>
+        <result property="alCode" column="al_code"/>
+        <result property="fightDate" column="fight_date"/>
+        <result property="shiAlCode" column="Shi_al_code"/>
+        <result property="shiFightDate" column="Shi_fight_date"/>
+        <result property="ssCode" column="ss_code"/>
+<!--        <result property="couponCode" column="coupon_code"/>-->
+        <result property="bpCode" column="bp_code"/>
+        <result property="bookNumber" column="book_number"/>
+        <result property="bookTotal" column="book_total"/>
+        <result property="bookState" column="book_state"/>
+        <result property="bookDate" column="book_date"/>
+<!--        <collection property="bookBills" column="book_code" select="com.hk.mapper.BookBillMapper.getBookBillsByCode" fetchType="lazy"/>-->
+
+        <association property="shippingSpace" column="{alCode=Shi_al_code,ssCode=ss_code,fightDate=Shi_fight_date}"
+                     select="com.hk.mapper.ShippingSpaceMapper.getshippingSpace" fetchType="eager"/>
+        <collection property="bookBills" ofType="com.hk.pojo.BookBill" fetchType="lazy">
+            <id property="bookCode" column="book_code"/>
+            <id property="bbCode" column="bb_code"/>
+            <result property="passCode" column="pass_code"/>
+            <result property="bbPrice" column="bb_price"/>
+            <result property="bbState" column="bb_state"/>
+            <association property="passenger" column="pass_code" select="com.hk.mapper.PassengerMapper.findPassengerByPassCode"
+            fetchType="lazy"/>
+        </collection>
+
+
+    </resultMap>
+    <select id="getBookByCode" resultMap="bookMap" parameterType="long">
+        select * from Book where book_code=#{bookCode}
+    </select>
+
+    <insert id="addBookDetail" useGeneratedKeys="true" keyProperty="bookCode" parameterType="com.hk.pojo.Book" >
+        insert into Book(al_code, fight_date, Shi_al_code, Shi_fight_date, ss_code, bp_code, book_number, book_total, book_state, book_date)
+        values(#{alCode}, #{fightDate}, #{shiAlCode}, #{shiFightDate}, #{ssCode}, #{bpCode}, #{bookNumber}, #{bookTotal}, #{bookState}, now())
+    </insert>
+
+    <update id="updateBookState" parameterType="long">
+        update Book set book_state=1 where book_code=#{bookCode}
+    </update>
+</mapper>

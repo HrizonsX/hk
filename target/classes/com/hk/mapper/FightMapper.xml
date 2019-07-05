@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.mapper.FightMapper">
+
+    <resultMap id="fightMap" type="com.hk.pojo.Fight">
+        <id property="alCode" column="al_code"/>
+        <id property="fightDate" column="fight_date"/>
+        <result property="aircraftCode" column="aircraft_code"/>
+        <result property="bcspNumber" column="bcsp_number"/>
+        <result property="ecsqNumber" column="ecsq_number"/>
+        <result property="fcsqNumber" column="fcsq_number"/>
+        <result property="fightState" column="fight_state"/>
+        <result property="ATD" column="ATD"/>
+        <result property="ATA" column="ATA" />
+        <result property="bcVersion" column="bc_version"/>
+        <result property="ecVersion" column="ec_version"/>
+        <result property="fcVersion" column="fc_version"/>
+        <result property="ETD" column="ETD"/>
+        <result property="ETA" column="ETA"/>
+    </resultMap>
+
+    <select id="getFight" resultMap="fightMap">
+        select * from Fight where al_code=#{alCode} and fight_date=#{fightDate}
+    </select>
+    <update id="decreaseBcsqNumber">
+        update Fight set bcsq_number=bcsq_number-1,bc_version=bc_version+1 where al_code=#{alCode} and fight_date=#{fightDate} and bc_version=#{bcVersion}
+    </update>
+    <update id="decreaseEcsqNumber">
+        update Fight set ecsq_number=ecsq_number-1,ec_version=ec_version+1 where al_code=#{alCode} and fight_date=#{fightDate} and ec_version=#{ecVersion}
+    </update>
+    <update id="decreaseFcsqNumber">
+        update Fight set fcsq_number=fcsq_number-1,fc_version=fc_version+1 where al_code=#{alCode} and fight_date=#{fightDate} and fc_version=#{fcVersion}
+    </update>
+
+    <insert id="addFight" parameterType="com.hk.pojo.Fight">
+        insert into Fight(al_code, fight_date, aircraft_code, bcsp_number, ecsq_number, fcsq_number, fight_state, ATD, ATA, ETD, ETA)
+        values(#{alCode}, #{fightDate}, #{aircraftCode}, #{bcspNumber}, #{ecsqNumber}, #{fcsqNumber}, #{fightState}, #{ATD}, #{ATA}, #{ETD}, #{ETA})
+    </insert>
+
+    <update id="updateFight" parameterType="com.hk.pojo.Fight">
+        update Fight set aircraft_code=#{aircraftCode},
+        fight_state=#{fightState}, ATD=#{ATD}, ATA=#{ATA}, ETD=#{ETD}, ETA=#{ETA} where al_code=#{alCode} and fight_date=#{fightDate}
+    </update>
+    <select id="getAllFights" resultMap="fightMap">
+        select * from Fight order by fight_date desc
+    </select>
+
+</mapper>

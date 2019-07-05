@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.mapper.ShippingSpaceMapper">
+    <resultMap id="shippingSpaceMap" type="com.hk.pojo.ShippingSpace">
+        <id property="alCode" column="al_code"/>
+        <id property="fightDate" column="fight_date"/>
+        <id property="ssCode" column="ss_code"/>
+        <result property="ssName" column="ss_name"/>
+        <result property="ssMeal" column="ss_meal"/>
+        <result property="ssReturnTicket" column="ss_return_ticket"/>
+        <result property="ssChangeTicket" column="ss_change_ticket"/>
+        <result property="ssPrice" column="ss_price"/>
+        <result property="ssRemark" column="ss_remark"/>
+    </resultMap>
+    <select id="getshippingSpace" parameterType="java.util.Map" resultMap="shippingSpaceMap">
+        select * from Shipping_Space where al_code=#{alCode} and fight_date=#{fightDate} and ss_code=#{ssCode}
+    </select>
+    <insert id="addShippingSpace" parameterType="com.hk.pojo.ShippingSpace">
+        insert into Shipping_Space(al_code, fight_date, ss_code, ss_name, ss_meal, ss_return_ticket, ss_change_ticket, ss_price, ss_remark)
+        values(#{alCode}, #{fightDate}, #{ssCode}, #{ssName}, #{ssMeal}, #{ssReturnTicket}, #{ssChangeTicket}, #{ssPrice}, #{ssRemark})
+    </insert>
+    <update id="updateShippingSpace" parameterType="com.hk.pojo.ShippingSpace">
+        update Shipping_Space set ss_name=#{ssName}, ss_meal=#{ssMeal}, ss_return_ticket=#{ssReturnTicket},
+        ss_change_ticket=#{ssChangeTicket}, ss_price=#{ssPrice}, ss_remark=#{ssRemark} where al_code=#{alCode} and fight_date=#{fightDate} and ss_code=#{ssCode}
+    </update>
+    <select id="getShippingSpacesOfFight" resultMap="shippingSpaceMap">
+        select * from Shipping_Space where al_code=#{alCode} and fight_date=#{fightDate}
+    </select>
+</mapper>

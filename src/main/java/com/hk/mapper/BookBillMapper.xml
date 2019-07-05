@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.mapper.BookBillMapper">
+    <resultMap id="bookBillMap" type="com.hk.pojo.BookBill">
+        <id property="bookCode" column="book_code"/>
+        <id property="bbCode" column="bb_code"/>
+        <result property="passCode" column="pass_code"/>
+        <result property="bbPrice" column="bb_price"/>
+        <result property="bbState" column="bb_state"/>
+    </resultMap>
+    <select id="getBookBillsByCode" parameterType="long" resultMap="bookBillMap">
+        select * from Book_Bill where book_code=#{bookCode}
+    </select>
+    <insert id="addBookBill" parameterType="com.hk.pojo.BookBill" >
+        insert into Book_Bill(book_code, bb_code, pass_code, bb_price, bb_state) values(
+        #{bookCode}, #{bbCode}, #{passCode}, #{bbPrice}, #{bbState})
+    </insert>
+    <update id="updateBookBillState">
+        update Book_Bill set bb_state=1 where book_code=#{bookCode} and bb_code=#{bbCode}
+    </update>
+</mapper>

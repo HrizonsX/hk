@@ -1,0 +1,1244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="hk:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f5e45cc8-98f3-4240-998c-d28d218aa716" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hk.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/controller/PassengerTicketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/AirLineMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/AirLineMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/AirportMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/AirportMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/BookBillMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/BookBillMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/BookMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/BookMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/BookPeopleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/BookPeopleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/CityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/CityMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/FightMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/FightMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/FightShippingMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/FightShippingMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/FightsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/FightsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/InsuranceCompensationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/InsuranceCompensationMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/InsuranceMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/InsuranceMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/InsuranceOrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/InsuranceOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/PassengerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/PassengerMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/ShippingSpaceMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/mapper/ShippingSpaceMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/AirLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/Airport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/BookBill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/BookParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/BookPeople.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/Fight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/FightShipping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/Fights.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/Insurance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/InsuranceCompensation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/InsuranceOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/InsuranceParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/Passenger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/PassengerModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/PassengerParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/SearchParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/ShippingSpace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/service/BookTicketService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/service/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/service/PassengerTicketService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/service/RegisterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/service/SearchTicketService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/service/impl/BookTicketServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/service/impl/PassengerTicketServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/service/impl/RegisterServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/service/impl/SearchTicketServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/util/CityCacheUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/util/FastJsonWraper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/util/FightsCacheUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/util/GenericFastJson2JsonRedisSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/util/InsuranceCacheUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hk/util/UserCacheUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-redis.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/error404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/error500.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/insurance.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/search.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/search2.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/searchBack.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/test.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/hk.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/controller/AdminController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/controller/PassengerTicketController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/AirLineMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/AirLineMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/AirportMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/AirportMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/BookBillMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/BookBillMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/BookMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/BookMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/BookPeopleMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/BookPeopleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/CityMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/CityMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/FightMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/FightMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/FightShippingMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/FightShippingMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/FightsMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/FightsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/InsuranceCompensationMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/InsuranceCompensationMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/InsuranceMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/InsuranceMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/InsuranceOrderMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/InsuranceOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/PassengerMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/PassengerMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/ShippingSpaceMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/mapper/ShippingSpaceMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/AirLine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/Airport.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/Book.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/BookBill.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/BookParams.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/BookPeople.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/City.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/Fight.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/FightShipping.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/Fights.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/Insurance.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/InsuranceCompensation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/InsuranceOrder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/InsuranceParams.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/Passenger.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/PassengerModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/PassengerParams.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/SearchParams.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/ShippingSpace.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/service/BookTicketService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/service/LoginService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/service/PassengerTicketService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/service/RegisterService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/service/SearchTicketService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/service/impl/BookTicketServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/service/impl/LoginServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/service/impl/PassengerTicketServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/service/impl/RegisterServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/service/impl/SearchTicketServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/util/CityCacheUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/util/CityCacheUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/util/FastJsonWraper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/util/FightsCacheUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/util/FightsCacheUtil$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/util/FightsCacheUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/util/GenericFastJson2JsonRedisSerializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/util/InsuranceCacheUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/util/InsuranceCacheUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hk/util/UserCacheUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/Login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/META-INF/hk.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/controller/AdminController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/controller/PassengerTicketController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/AirLineMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/AirLineMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/AirportMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/AirportMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/BookBillMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/BookBillMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/BookMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/BookMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/BookPeopleMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/BookPeopleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/CityMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/CityMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/FightMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/FightMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/FightShippingMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/FightShippingMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/FightsMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/FightsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/InsuranceCompensationMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/InsuranceCompensationMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/InsuranceMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/InsuranceMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/InsuranceOrderMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/InsuranceOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/PassengerMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/PassengerMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/ShippingSpaceMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/mapper/ShippingSpaceMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/AirLine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/Airport.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/Book.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/BookBill.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/BookParams.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/BookPeople.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/City.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/Fight.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/FightShipping.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/Fights.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/Insurance.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/InsuranceCompensation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/InsuranceOrder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/InsuranceParams.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/Passenger.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/PassengerModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/PassengerParams.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/SearchParams.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/pojo/ShippingSpace.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/service/BookTicketService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/service/LoginService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/service/PassengerTicketService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/service/RegisterService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/service/SearchTicketService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/service/impl/BookTicketServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/service/impl/LoginServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/service/impl/PassengerTicketServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/service/impl/RegisterServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/service/impl/SearchTicketServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/util/CityCacheUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/util/CityCacheUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/util/FastJsonWraper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/util/FightsCacheUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/util/FightsCacheUtil$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/util/FightsCacheUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/util/GenericFastJson2JsonRedisSerializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/util/InsuranceCacheUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/util/InsuranceCacheUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/com/hk/util/UserCacheUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/classes/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/aliyun-java-sdk-afs-1.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/aliyun-java-sdk-core-3.0.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/ant-1.9.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/ant-launcher-1.9.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/asm-5.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/aspectjrt-1.9.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/aspectjweaver-1.5.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/cglib-3.2.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/commons-dbcp2-2.6.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/commons-pool2-2.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/fastjson-1.2.47.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/jackson-annotations-2.8.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/jackson-core-2.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/jackson-databind-2.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/javassist-3.21.0-GA.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/jcl-over-slf4j-1.7.24.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/jedis-2.9.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/log4j-1.2.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/mybatis-3.4.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/mybatis-spring-1.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/mysql-connector-java-8.0.16.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/protobuf-java-3.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/slf4j-api-1.7.22.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/slf4j-log4j12-1.7.22.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-aop-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-beans-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-context-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-context-support-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-core-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-data-commons-1.13.1.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-data-redis-1.8.1.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-expression-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-jdbc-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-orm-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-oxm-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-test-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-tx-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-web-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/lib/spring-webmvc-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/spring-redis.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/error404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/error500.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/index2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/insurance.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/search.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/search2.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/searchBack.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/hk/test.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/redPacket/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/css/maven-base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/css/maven-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/css/print.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/css/site.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/dependencies.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/dependency-info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/distribution-management.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/images/close.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/images/collapsed.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/images/expanded.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/images/external.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/images/icon_error_sml.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/images/icon_info_sml.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/images/icon_success_sml.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/images/icon_warning_sml.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/images/logos/build-by-maven-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/images/logos/build-by-maven-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/images/logos/maven-feather.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/images/newwindow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/integration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/issue-tracking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/license.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/mail-lists.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/plugin-management.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/plugins.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/project-info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/project-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/source-repository.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/team-list.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/controller/AdminController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-705">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Mybatis-config" />
+        <option value="HTML File" />
+        <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="Mapper" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Array</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/pojo/BookPeople.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/service/impl/LoginServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/BookPeopleMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/service/impl/RegisterServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/util/UserCacheUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/pojo/Book.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/pojo/BookParams.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index2.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/InsuranceCompensationMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/pojo/InsuranceParams.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/pojo/InsuranceOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/insurance.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/util/InsuranceCacheUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/BookMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/BookMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/InsuranceOrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/InsuranceMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/BookBillMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/BookBillMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/InsuranceOrderMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/service/BookTicketService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/InsuranceMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/InsuranceCompensationMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/pojo/Insurance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/AirLineMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/FightMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/AirLineMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/FightShippingMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/FightShippingMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/ShippingSpaceMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/ShippingSpaceMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/pojo/Airport.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/AirportMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/AirportMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/FightMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/util/ParameterLinkedHashSetDataDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/search.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/pojo/City.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/CityMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/mapper/CityMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/util/GenericFastJson2JsonRedisSerializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/service/SearchTicketService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/util/CityCacheUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/service/impl/BookTicketServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/service/impl/SearchTicketServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/test.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hk/controller/PassengerTicketController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="/usr/local/apache-maven-3.6.1/lib" />
+        <option name="mavenHome" value="/usr/local/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="/usr/local/apache-maven-3.6.1/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="redPacket Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="6" />
+    <option name="y" value="33" />
+    <option name="width" value="1680" />
+    <option name="height" value="961" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="spring" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.401" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.401" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="e5120d43-2c3f-47ef-9f26-65e539e05186" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="hk:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/hk_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_hk_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56653" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="hk:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f5e45cc8-98f3-4240-998c-d28d218aa716" name="Default Changelist" comment="" />
+      <created>1559881361708</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559881361708</updated>
+      <workItem from="1559881363158" duration="328000" />
+      <workItem from="1559881694331" duration="3449000" />
+      <workItem from="1560127530298" duration="336000" />
+      <workItem from="1561003198416" duration="219000" />
+      <workItem from="1561003498409" duration="34000" />
+      <workItem from="1561003552241" duration="563000" />
+      <workItem from="1561041584087" duration="2012000" />
+      <workItem from="1561085503032" duration="1076000" />
+      <workItem from="1561088502603" duration="4000" />
+      <workItem from="1561088705306" duration="43000" />
+      <workItem from="1561088778349" duration="30000" />
+      <workItem from="1561088827587" duration="9014000" />
+      <workItem from="1561174751125" duration="13440000" />
+      <workItem from="1561273821052" duration="15332000" />
+      <workItem from="1561347011488" duration="11910000" />
+      <workItem from="1561376461981" duration="198000" />
+      <workItem from="1561377057286" duration="296000" />
+      <workItem from="1561382188488" duration="1345000" />
+      <workItem from="1561391169754" duration="44000" />
+      <workItem from="1561391220424" duration="204000" />
+      <workItem from="1561430282293" duration="1759000" />
+      <workItem from="1561479919475" duration="736000" />
+      <workItem from="1561521387949" duration="4346000" />
+      <workItem from="1561552811788" duration="2218000" />
+      <workItem from="1561710067506" duration="18305000" />
+      <workItem from="1561788545247" duration="8249000" />
+      <workItem from="1561883686875" duration="16911000" />
+      <workItem from="1561949962538" duration="20893000" />
+      <workItem from="1562046625688" duration="21506000" />
+      <workItem from="1562122098485" duration="24657000" />
+      <workItem from="1562208169745" duration="11056000" />
+      <workItem from="1562236966815" duration="45000" />
+      <workItem from="1562237180394" duration="10020000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="200578000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="6" y="33" width="1680" height="961" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36385837" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498779" visible="true" weight="0.4073648" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32857144" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4993895" weight="0.32857144" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.501221" side_tool="true" weight="0.32837528" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" sideWeight="0.4993895" weight="0.32857144" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Application Servers" order="13" weight="0.32959184" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.3256617" />
+      <window_info anchor="bottom" id="Spring" order="15" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32967034" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" x="0" y="0" width="370" height="761" id="Documentation" order="9" side_tool="true" weight="0.32967034" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="7-5 4:43提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="7-5 4:43提交" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/service/impl/RegisterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/pojo/AirLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/AirportMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/AirportMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/pojo/Airport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding>
+            <element signature="e#241#242#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/pojo/BookParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/FightMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/AirLineMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/util/ParameterLinkedHashSetDataDemo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/pojo/PassengerModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/pojo/PassengerParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/pojo/Fight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/AirLineMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/FightMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="44" column="51" lean-forward="true" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/pojo/City.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#196#197#0" expanded="true" />
+            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="66" lean-forward="true" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/CityMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/pojo/Fights.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/pojo/SearchParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/util/GenericFastJson2JsonRedisSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="71" lean-forward="true" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/service/BookTicketService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/pojo/InsuranceParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/service/SearchTicketService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/service/impl/BookTicketServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="125" column="26" lean-forward="true" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/service/impl/SearchTicketServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#2575#2576#0" expanded="true" />
+            <element signature="e#2640#2641#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/error404.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/error500.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/insurance.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="36" lean-forward="true" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="67" column="68" lean-forward="true" selection-start-line="67" selection-start-column="68" selection-end-line="67" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/search2.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/searchBack.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/test.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/search.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/util/CityCacheUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="43" column="25" lean-forward="true" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#1384#1385#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/InsuranceMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/FightShippingMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="125" lean-forward="true" selection-start-line="12" selection-start-column="125" selection-end-line="12" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/FightsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/CityMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="60" lean-forward="true" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/ShippingSpaceMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/InsuranceOrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/util/UserCacheUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/util/InsuranceCacheUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/PassengerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/controller/PassengerTicketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1018">
+          <caret line="112" column="25" lean-forward="true" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-705">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>hk:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>hk</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aspectj:aspectjweaver:1.5.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.mapper.FightShippingMapper">
+    <resultMap id="fightShippingMap" type="com.hk.pojo.FightShipping">
+        <result property="alCode" column="al_code"/>
+        <result property="fightDate" column="fight_date"/>
+        <result property="ssCode" column="ss_code"/>
+        <result property="ssName" column="ss_name"/>
+        <result property="bcsqNumber" column="bcsq_number"/>
+        <result property="ecsqNumber" column="ecsq_number"/>
+        <result property="fcsqNumber" column="fcsq_number"/>
+        <result property="ssMeal" column="ss_meal"/>
+        <result property="ssReturnTicket" column="ss_return_ticket"/>
+        <result property="ssChangeTicket" column="ss_change_ticket"/>
+        <result property="ssPrice" column="ss_price"/>
+    </resultMap>
+    <select id="getFightAllShippings" parameterType="java.util.Map" resultMap="fightShippingMap">
+        select al_code, fight_date, ss_code, ss_name, bcsq_number, ecsq_number, fcsq_number, ss_meal, ss_return_ticket,
+        ss_change_ticket, ss_price from fight_shipping where fight_date=#{fightDate} and al_code=#{alCode}
+    </select>
+</mapper>

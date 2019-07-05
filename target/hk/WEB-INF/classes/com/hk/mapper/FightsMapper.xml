@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.mapper.FightsMapper">
+    <resultMap id="fightsMap" type="com.hk.pojo.Fights">
+        <result property="alCode" column="al_code"/>
+        <result property="fightDate" column="fight_date"/>
+        <result property="dcityName" column="dcity_name"/>
+        <result property="tcityName" column="tcity_name"/>
+        <result property="dairportName" column="dairport_name"/>
+        <result property="tairportName" column="tairport_name"/>
+        <result property="ATD" column="ATD"/>
+        <result property="ATA" column="ATA"/>
+        <result property="ETD" column="ETD"/>
+        <result property="ETA" column="ETA"/>
+        <result property="aircraftType" column="aircraft_type"/>
+        <result property="fightState" column="fight_state"/>
+        <result property="alName" column="al_name"/>
+        <collection property="fightShippings" column="{fightDate=fight_date,alCode=al_code}"
+                    select="com.hk.mapper.FightShippingMapper.getFightAllShippings" fetchType="eager"/>
+    </resultMap>
+    <resultMap id="alFightsMap" type="com.hk.pojo.Fights">
+        <result property="alCode" column="al_code"/>
+        <result property="fightDate" column="fight_date"/>
+        <result property="dcityName" column="dcity_name"/>
+        <result property="tcityName" column="tcity_name"/>
+        <result property="dairportName" column="dairport_name"/>
+        <result property="tairportName" column="tairport_name"/>
+        <result property="ATD" column="ATD"/>
+        <result property="ATA" column="ATA"/>
+        <result property="ETD" column="ETD"/>
+        <result property="ETA" column="ETA"/>
+        <result property="aircraftType" column="aircraft_type"/>
+        <result property="fightState" column="fight_state"/>
+        <result property="alName" column="al_name"/>
+    </resultMap>
+    <select id="getFightsByDateAndDT" resultMap="fightsMap">
+        select al_code, fight_date, dcity_name, tcity_name, dairport_name, tairport_name, ATD, ATA, ETD, ETA, aircraft_type, fight_state, al_name from
+        fights where DATE_FORMAT(fight_date,'%Y-%m-%d')=#{fightDate} and dcity_name=#{dcityName} and tcity_name=#{tcityName}
+    </select>
+
+    <select id="getSingleFights" resultMap="fightsMap">
+        select al_code, fight_date, dcity_name, tcity_name, dairport_name, tairport_name, ATD, ATA, ETD, ETA, aircraft_type, fight_state, al_name from
+        fights where fight_date=#{fightDate} and al_code=#{alCode}
+    </select>
+
+    <select id="getAlFights" resultMap="alFightsMap">
+        select al_code, fight_date, dcity_name, tcity_name, dairport_name, tairport_name, ATD, ATA, ETD, ETA, aircraft_type, fight_state, al_name from
+        fights where DATE_FORMAT(fight_date,'%Y-%m-%d')=#{fightDate} and al_code=#{alCode}
+    </select>
+
+</mapper>

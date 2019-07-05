@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+        <setting name="useGeneratedKeys" value="true"/>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <setting name="defaultStatementTimeout" value="35000"/>
+    </settings>
+    <mappers>
+        <mapper resource="com/hk/mapper/FightMapper.xml"/>
+        <mapper resource="com/hk/mapper/PassengerMapper.xml"/>
+        <mapper resource="com/hk/mapper/BookMapper.xml"/>
+        <mapper resource="com/hk/mapper/BookBillMapper.xml"/>
+        <mapper resource="com/hk/mapper/ShippingSpaceMapper.xml"/>
+        <mapper resource="com/hk/mapper/FightsMapper.xml"/>
+        <mapper resource="com/hk/mapper/FightShippingMapper.xml"/>
+        <mapper resource="com/hk/mapper/BookPeopleMapper.xml"/>
+        <mapper resource="com/hk/mapper/InsuranceMapper.xml"/>
+        <mapper resource="com/hk/mapper/InsuranceCompensationMapper.xml"/>
+        <mapper resource="com/hk/mapper/InsuranceOrderMapper.xml"/>
+        <mapper resource="com/hk/mapper/AirLineMapper.xml"/>
+        <mapper resource="com/hk/mapper/AirportMapper.xml"/>
+        <mapper resource="com/hk/mapper/CityMapper.xml"/>
+    </mappers>
+</configuration>

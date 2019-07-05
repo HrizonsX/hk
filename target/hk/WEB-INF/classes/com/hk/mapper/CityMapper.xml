@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.mapper.CityMapper">
+    <resultMap id="cityMap" type="com.hk.pojo.City">
+        <id property="cityCode" column="city_code"/>
+        <result property="citCityCode" column="Cit_city_code"/>
+        <result property="cityName" column="city_name"/>
+    </resultMap>
+    <select id="getAllCities" resultMap="cityMap">
+        select city_code, Cit_city_code, city_name from City
+    </select>
+</mapper>

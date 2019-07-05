@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.mapper.AirportMapper">
+    <resultMap id="airportMap" type="com.hk.pojo.Airport">
+        <id property="airportCode" column="airport_code"/>
+        <result property="cityCode" column="city_code"/>
+        <result property="airportName" column="airport_name"/>
+    </resultMap>
+    <select id="getAllAirports" resultMap="airportMap">
+        select airport_code, city_code, airport_name from Airport
+    </select>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.mapper.InsuranceCompensationMapper">
+    <resultMap id="insuranceRolesMap" type="com.hk.pojo.InsuranceCompensation">
+        <id property="icCode" column="ic_code"/>
+        <result property="insuranceCode" column="insurance_code"/>
+        <result property="icName" column="ic_name"/>
+        <result property="icPrice" column="ic_price"/>
+        <result property="icState" column="ic_state"/>
+    </resultMap>
+    <select id="getInsuranceRoles" resultMap="insuranceRolesMap">
+        select ic_code, insurance_code, ic_name, ic_price, ic_state from Insurance_Compensation where insurance_code=#{insuranceCode}
+    </select>
+</mapper>

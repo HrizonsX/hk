@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.mapper.AirLineMapper">
+    <resultMap id="airLineMap" type="com.hk.pojo.AirLine">
+        <id property="alCode" column="al_code"/>
+        <result property="alName" column="al_name"/>
+        <result property="daNumber" column="da_number"/>
+        <result property="taNumber" column="ta_number"/>
+        <result property="alState" column="al_state"/>
+    </resultMap>
+    <insert id="addAirLine" parameterType="com.hk.pojo.AirLine">
+        insert into Air_Line(al_code, al_name, da_number, ta_number, al_state) values(#{alCode}, #{alName}, #{daNumber}, #{taNumber}, #{alState})
+    </insert>
+    <update id="updateAirLine" parameterType="com.hk.pojo.AirLine">
+        update Air_Line set al_name=#{alName},
+        da_number=#{daNumber},
+        ta_number=#{taNumber},
+        al_state=#{alState} where al_code=#{alCode}
+    </update>
+    <select id="getAllAirLine" resultMap="airLineMap">
+        select al_code, al_name, da_number, ta_number, al_state from Air_Line order by al_code
+    </select>
+    <select id="getAirLine" resultMap="airLineMap">
+        select al_code, al_name, da_number, ta_number, al_state from Air_Line where al_code=#{alCode}
+    </select>
+</mapper>

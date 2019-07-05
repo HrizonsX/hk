@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.mapper.PassengerMapper">
+    <resultMap id="passengerMap" type="com.hk.pojo.Passenger">
+        <id property="passCode" column="pass_code"/>
+        <result property="ptCode" column="pt_code"/>
+        <result property="passName" column="pass_name"/>
+        <result property="passID" column="pass_ID"/>
+        <result property="passPhone" column="pass_phone"/>
+        <result property="passRemark" column="pass_remark"/>
+        <result property="passState" column="pass_state"/>
+    </resultMap>
+    <insert id="addPassenger" useGeneratedKeys="true" keyProperty="passCode" parameterType="com.hk.pojo.Passenger">
+        insert into Passenger(pt_code, pass_name, pass_ID, pass_phone, pass_remark, pass_state) values(
+        #{ptCode}, #{passName}, #{passID}, #{passPhone}, #{passRemark}, #{passState})
+    </insert>
+    <select id="findPassengerByPassCode" parameterType="long" resultMap="passengerMap">
+        select * from Passenger where pass_code=#{passCode}
+    </select>
+</mapper>

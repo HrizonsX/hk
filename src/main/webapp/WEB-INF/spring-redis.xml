@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cache="http://www.springframework.org/schema/cache"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
+
+    <cache:annotation-driven cache-manager="redisCacheManager"/>
+    <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxTotal" value="150"/>
+        <property name="maxWaitMillis" value="20000"/>
+        <property name="maxIdle" value="30"/>
+        <property name="testOnBorrow" value="true"/>
+    </bean>
+    <bean id="stringRedisSerializer" class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
+
+    <bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+        <property name="poolConfig" ref="poolConfig"/>
+        <property name="hostName" value="127.0.0.1"/>
+        <property name="port" value="6379"/>
+        <property name="timeout" value="100"/>
+    </bean>
+    <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+        <property name="connectionFactory" ref="connectionFactory"/>
+        <property name="keySerializer" ref="stringRedisSerializer"/>
+        <property name="valueSerializer">
+            <bean class="com.hk.util.GenericFastJson2JsonRedisSerializer"/>
+        </property>
+        <property name="hashKeySerializer" ref="stringRedisSerializer"/>
+        <property name="hashValueSerializer">
+            <bean class="com.hk.util.GenericFastJson2JsonRedisSerializer"/>
+        </property>
+        <property name="defaultSerializer" ref="stringRedisSerializer"/>
+    </bean>
+
+    <bean id="redisCacheManager" class="org.springframework.data.redis.cache.RedisCacheManager">
+        <constructor-arg index="0" ref="redisTemplate"/>
+        <property name="defaultExpiration" value="10"/>
+        <property name="cacheNames">
+            <list>
+                <value>redisCacheManager</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>
