@@ -1,0 +1,77 @@
+.tab_backgroundColor{
+    background: linear-gradient(180deg,#1843a6,#2f70d3);;
+}
+.btn_right {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.size{
+    width: 317px;
+}
+
+.btn_groundBook{
+    background: url("../png/book.png");
+}
+
+.groundxmhk{
+    background: url("../png/xmhk.png");
+}
+
+.headImgHigh{
+    height: 29px;
+}
+
+.orange{
+    background: url("../png/orange.png");
+    height: 34px;
+}
+
+.modalHeader{
+    height: 60px;
+}
+
+.modalWidth{
+    width: 450px;
+    display: table;
+    margin:0 auto;
+}
+
+.btn_groundAir{
+    background: url("../png/air.png");
+}
+
+.btn_groundCheck{
+    background: url("../png/check.png");
+}
+
+.btn_groundService{
+    background: url("../png/service.png");
+}
+
+.imgSize{
+    width:40px;
+    height: 30px;
+}
+
+.textSize{
+    font-size: 10px;
+    color:white;
+}
+
+.tabSize{
+    width:84px;
+    height: 67px;
+}
+
+.listTabSize{
+    width:84px;
+}
+
+.listTab{
+    border-radius:15px 0px 0px 15px;
+}
+
+.space{
+    width: 30px;
+}
