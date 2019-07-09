@@ -69,8 +69,10 @@
 <form action="./passengerTicket/loginUser.do" method="post">
     <input type="text" name="bpCode"/>
     <input type="password" name="bpPassword"/></br>
+
 <%--    <div id="sc">--%>
 <%--    </div>--%>
+
     <input type="submit" value="提交" id="submit"/>
 </form>
 </body>

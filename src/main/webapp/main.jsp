@@ -73,12 +73,12 @@
                                     <%--模态框主体部分--%>
                                     <div class="modal-body">
                                         <%--主体内的表单，提交位置和方法记得改--%>
-                                        <form class="form-horizontal" role="form" method="post" action="#" id="signIn" name="signIn">
+                                        <form class="form-horizontal" role="form" method="post" action="./passengerTicket/loginUser.do" id="signIn" name="signIn">
                                             <%--用户名--%>
                                             <div class="form-group">
                                                 <label for="bpCode" class="col-sm-3 control-label">用户名</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" id="bpCode" name="pcCode" class="form-control" placeholder="请输入用户名">
+                                                    <input type="text" id="bpCode" name="bpCode" class="form-control" placeholder="请输入用户名">
                                                 </div>
                                             </div>
                                             <%--密码--%>

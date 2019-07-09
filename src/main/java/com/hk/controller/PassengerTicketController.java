@@ -149,13 +149,14 @@ public class PassengerTicketController {
         return "./search.jsp";
     }
 
-    @RequestMapping(value = "/getCities", method = {RequestMethod.GET, RequestMethod.POST})
+    //返回城市列表的json格式
+    @RequestMapping(value = "/getCities", method = {RequestMethod.GET, RequestMethod.POST}, produces = "text/json;charset=UTF-8")
     @ResponseBody
     public String getCities(){
         List<City> citiesList = searchTicketService.getAllCities();
         System.out.println(citiesList.get(0));
         System.out.println(citiesList.size());
-        String citiesJson = JSON.toJSON(citiesList).toString();
+        String citiesJson = JSON.toJSONString(citiesList);
         System.out.println(citiesJson);
         return citiesJson;
     }
