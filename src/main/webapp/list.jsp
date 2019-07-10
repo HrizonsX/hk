@@ -17,8 +17,39 @@
     <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js" type="text/javascript"></script>
     <script src="${pageContext.request.contextPath}/js/bootstrap.min.js" type="text/javascript"></script>
     <title>查询页</title>
+    <script src="${pageContext.request.contextPath}/js/img_ver.js"></script>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
     <link href="${pageContext.request.contextPath}/css/main.css" type="text/css" rel="stylesheet"/>
     <link href="${pageContext.request.contextPath}/css/button.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" language="JavaScript">
+        function ajaxValidate() {
+            var bpCode = $("#UbpCode").val();
+            // alert(bpCode);
+            $.ajax({
+                type: "POST",
+                url: "/hk_war_exploded/passengerTicket/registerUser1.do",//提交地址
+                contentType: 'text/plain;charset=utf-8', //设置请求头信息
+                data: bpCode,//提交数据
+                dataType: "text",//返回text内容
+                async: false,
+                success: function (data) {
+                    if ("no" == data) {
+                        //后端传来的msg的值是no,不能注册。反之。
+                        $("#remind").html("<font color='red'>用户名已被注册</font>");
+                        $("#submit").attr("disabled", true);
+                    }
+                    if ("yes" == data) {
+                        //如果没有被注册，将提示语清空。
+                        $("#remind").html("用户名可用");
+                        $("#submit").attr("disabled", false);
+                    }
+                },
+                error: function (data) {
+                    alert("发生了一个错误");
+                }
+            });
+        }
+    </script>
 </head>
 
 <%--需要数据：用户信息，list（航班），上个页面里的出发和终点城市以及日期--%>
@@ -37,7 +68,7 @@
     %>
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="main.jsp">
+            <a class="navbar-brand" href="/hk_war_exploded/main.jsp">
                 <img src="${pageContext.request.contextPath}/png/xmhk.png" class="img-responsive headImgHigh" alt="Cinque Terre">
             </a>
         </div>
@@ -81,27 +112,35 @@
                                     <h4>登录</h4>
                                 </div>
                                 <%--模态框主体部分--%>
-                                <div class="modal-body">
-                                    <%--主体内的表单，提交位置和方法记得改--%>
-                                    <form class="form-horizontal" role="form" method="post" action="#" id="signIn" name="signIn">
-                                        <%--用户名--%>
-                                        <div class="form-group">
-                                            <label for="bpCode" class="col-sm-3 control-label">用户名</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" id="bpCode" name="bpCode" class="form-control" placeholder="请输入用户名">
+                                    <div class="modal-body">
+                                        <%--主体内的表单，提交位置和方法记得改--%>
+                                        <form class="form-horizontal" role="form" method="post"
+                                              action="/hk_war_exploded/passengerTicket/loginUser.do" id="signIn" name="signIn">
+                                            <%--用户名--%>
+                                            <div class="form-group">
+                                                <label for="bpCode" class="col-sm-3 control-label">用户名</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" id="bpCode" name="bpCode" class="form-control"
+                                                           placeholder="请输入用户名">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <%--密码--%>
-                                        <div class="form-group">
-                                            <label for="bpPassword" class="col-sm-3 control-label">密码</label>
-                                            <div class="col-sm-9">
-                                                <input type="password" id="bpPassword" name="bpPassword" class="form-control" placeholder="请输入密码"/>
+                                            <%--密码--%>
+                                            <div class="form-group">
+                                                <label for="bpPassword" class="col-sm-3 control-label">密码</label>
+                                                <div class="col-sm-9">
+                                                    <input type="password" id="bpPassword" name="bpPassword"
+                                                           class="form-control" placeholder="请输入密码"/>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <%--提交按钮--%>
-                                        <button class="button button-pill button-primary" type="submit">登录</button>
-                                    </form>
-                                </div>
+                                            <div class="verBox">
+                                                <div id="imgVer" style="display:inline-block;"></div>
+                                            </div>
+                                            <%--提交按钮--%>
+                                            <button id="loginSubmit" class="button button-pill button-primary" type="submit"
+                                                    disabled="disabled">登录
+                                            </button>
+                                        </form>
+                                    </div>
                                 <%--<div class="modal-footer">--%>
                                 <%--<!--  模态框底部样式，一般是提交或者确定按钮 -->--%>
                                 <%--<button type="submit" class="btn btn-info">登录</button>--%>
@@ -126,46 +165,57 @@
                                     <h4>注册</h4>
                                 </div>
                                 <%--模态框主体部分--%>
-                                <div class="modal-body">
-                                    <%--主体内的表单，提交位置和方法还没动--%>
-                                    <form class="form-horizontal" role="form" method="post" action="#" id="signUp" name="signUp">
-                                        <%--用户名--%>
-                                        <div class="form-group">
-                                            <label for="UbpCode" class="col-sm-3 control-label">用户名</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" id="UbpCode" name="pcCode" class="form-control" placeholder="请输入用户名">
+                                    <div class="modal-body">
+                                        <%--主体内的表单，提交位置和方法还没动--%>
+                                        <form class="form-horizontal" role="form" method="post"
+                                              action="/hk_war_exploded/passengerTicket/registerUser.do" id="signUp"
+                                              name="signUp">
+                                            <%--用户名--%>
+                                            <div class="form-group">
+                                                <label for="UbpCode" class="col-sm-3 control-label">用户名</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" id="UbpCode" name="bpCode" class="form-control"
+                                                           placeholder="请输入用户名" onblur="ajaxValidate()"/>
+                                                    <div id="remind" color="red"></div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <%--密码--%>
-                                        <div class="form-group">
-                                            <label for="UbpPassword" class="col-sm-3 control-label">密码</label>
-                                            <div class="col-sm-9">
-                                                <input type="password" id="UbpPassword" name="bpPassword" class="form-control" placeholder="请输入密码"/>
+
+                                            <%--密码--%>
+                                            <div class="form-group">
+                                                <label for="UbpPassword" class="col-sm-3 control-label">密码</label>
+                                                <div class="col-sm-9">
+                                                    <input type="password" id="UbpPassword" name="bpPassword"
+                                                           class="form-control" placeholder="请输入密码"/>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <%--姓名--%>
-                                        <div class="form-group">
-                                            <label for="UbpName" class="col-sm-3 control-label">姓名</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" id="UbpName" name="bpName" class="form-control" placeholder="请输入姓名">
+                                            <%--姓名--%>
+                                            <div class="form-group">
+                                                <label for="UbpName" class="col-sm-3 control-label">姓名</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" id="UbpName" name="bpName" class="form-control"
+                                                           placeholder="请输入姓名">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="UbpPhone" class="col-sm-3 control-label">电话</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" id="UbpPhone" name="bpPhone" class="form-control" placeholder="请输入联系电话">
+                                            <div class="form-group">
+                                                <label for="UbpPhone" class="col-sm-3 control-label">电话</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" id="UbpPhone" name="bpPhone" class="form-control"
+                                                           placeholder="请输入联系电话">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="UbpEmail" class="col-sm-3 control-label">电子邮箱</label>
-                                            <div class="col-sm-9">
-                                                <input type="email" id="UbpEmail" name="bpEmail" class="form-control" placeholder="请输入电子邮箱">
+                                            <div class="form-group">
+                                                <label for="UbpEmail" class="col-sm-3 control-label">电子邮箱</label>
+                                                <div class="col-sm-9">
+                                                    <input type="email" id="UbpEmail" name="bpEmail" class="form-control"
+                                                           placeholder="请输入电子邮箱">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <%--提交按钮--%>
-                                        <button class="button button-pill button-primary" type="submit">注册</button>
-                                    </form>
-                                </div>
+                                            <%--提交按钮--%>
+                                            <button class="button button-pill button-primary" type="submit" id="submit"
+                                                    disabled="disabled">注册
+                                            </button>
+                                        </form>
+                                    </div>
                                 <%--<div class="modal-footer">--%>
                                 <%--<!--  模态框底部样式，一般是提交或者确定按钮 -->--%>
                                 <%--<button type="submit" class="btn btn-info">登录</button>--%>
@@ -305,6 +355,25 @@
         <%}%>
     </div>
 </div>
+<script>
+    imgVer({
+        el: '$("#imgVer")',
+        width: '260',
+        height: '113',
+        img: [
+            '${pageContext.request.contextPath}/png/ver-1.png',
+            '${pageContext.request.contextPath}/png/ver-2.png',
+            '${pageContext.request.contextPath}/png/ver-3.png'
+        ],
+        success: function () {
+            //验证成功后做的事情
+            $("#loginSubmit").attr("disabled", false);
+        },
+        error: function () {
+            // alert("这么简单的拼图都不会");
+        }
+    });
+</script>
 <script>
     laydate.render({
         elem: '#fightDate' //指定元素

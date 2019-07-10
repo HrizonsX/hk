@@ -357,18 +357,29 @@
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="panel1">
-                                <form class="form-horizontal" role="form" method="post" action="#">
+                                <form class="form-horizontal" role="form" method="post" action="./passengerTicket/searchDynamic.do">
                                     <div class="form-group" style="margin-top:10px">
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="adcityName" name="dcityName"
-                                                   placeholder="出发城市">
-                                        </div>
+                                            <input class="form-control" name="dcityName" id="adcityName" type="text"
+                                                   placeholder="出发城市"
+                                                   autocomplete="off" readonly="true"></div>
+                                        <script type="text/javascript">
+                                            $("#adcityName").click(function (e) {
+                                                SelCity(this, e);
+                                            });
+                                        </script>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="atcityName" name="tcityName"
-                                                   placeholder="到达城市">
-                                        </div>
+                                            <input class="form-control" name="tcityName" id="atcityName" type="text"
+                                                   placeholder="到达城市"
+                                                   autocomplete="off" readonly="true" data-container="body" data-toggle="popover"
+                                                   data-placement="bottom"></div>
+                                        <script type="text/javascript">
+                                            $("#atcityName").click(function (e) {
+                                                SelCity(this, e);
+                                            });
+                                        </script>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-10">

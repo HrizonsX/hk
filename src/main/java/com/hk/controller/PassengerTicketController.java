@@ -64,6 +64,26 @@ public class PassengerTicketController {
         return mv;
     }
 
+    @RequestMapping(value = "/searchDynamic", method = {RequestMethod.GET, RequestMethod.POST})
+    //根据时间、出发地和目的地组合查询所有航班
+    public ModelAndView searchDynamic(SearchParams searchParams){
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        Date d = null;
+        try {
+            d = format.parse(searchParams.getFightDate());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        java.sql.Date date = new java.sql.Date(d.getTime());
+        List<Fights> fights = searchTicketService.getFightsByDateAndDT(date, searchParams.getDcityName()
+                , searchParams.getTcityName());
+        ModelAndView mv = new ModelAndView();
+        String jsonFights = JSON.toJSON(fights).toString();
+        mv.addObject("jsonFights", jsonFights);
+        mv.setViewName("dynamic");
+        return mv;
+    }
+
     //json传参，订票
     @RequestMapping(value = "/bookTicket2", method ={RequestMethod.POST})
         public ModelAndView submitUserList_4(@RequestBody BookParams bookParams) {
