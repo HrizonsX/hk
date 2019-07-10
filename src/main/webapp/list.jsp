@@ -1,4 +1,8 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.hk.pojo.Fights" %>
+<%@ page import="com.alibaba.fastjson.JSON" %>
+<%@ page import="com.hk.pojo.FightShipping" %><%--
   Created by IntelliJ IDEA.
   User: admin
   Date: 2019/7/8
@@ -8,23 +12,33 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="laydate/laydate.js"></script>
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+    <script src="${pageContext.request.contextPath}/laydate/laydate.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap.min.js" type="text/javascript"></script>
     <title>查询页</title>
-    <link href="css/main.css" type="text/css" rel="stylesheet"/>
-    <link href="css/button.css" type="text/css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/css/main.css" type="text/css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/css/button.css" type="text/css" rel="stylesheet"/>
 </head>
+
+<%--需要数据：用户信息，list（航班），上个页面里的出发和终点城市以及日期--%>
+<%--补充部分：搜索表单的提交可能需要刷新页面，预定的标签需添加跳转，for循环部分还没写--%>
+<%--可能注释有点问题，会显示在界面上，记得删---特别是//这种--%>
+
 <body>
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+<%
+    String jsonFights = (String)request.getAttribute("jsonFights");
+    List<Fights> fights = JSON.parseArray(jsonFights, Fights.class);
+%>
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
     <%
         String bpCode = (String)session.getAttribute("bpCode");
     %>
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="main.jsp">
-                <img src="png/xmhk.png" class="img-responsive headImgHigh" alt="Cinque Terre">
+                <img src="${pageContext.request.contextPath}/png/xmhk.png" class="img-responsive headImgHigh" alt="Cinque Terre">
             </a>
         </div>
         <div class="navbar-collapse collapse" style="text-align:center">
@@ -74,7 +88,7 @@
                                         <div class="form-group">
                                             <label for="bpCode" class="col-sm-3 control-label">用户名</label>
                                             <div class="col-sm-9">
-                                                <input type="text" id="bpCode" name="pcCode" class="form-control" placeholder="请输入用户名">
+                                                <input type="text" id="bpCode" name="bpCode" class="form-control" placeholder="请输入用户名">
                                             </div>
                                         </div>
                                         <%--密码--%>
@@ -178,43 +192,128 @@
     </div>
 </nav>
 
-    <div class="container">
-        <div class="row clearfix">
-            <%--<div class="col-sm-7 column">--%>
-                <form class="form-inline" role="form">
-                    <div class="form-group">
-                        <input type="text" name="dcityName" class="form-control" value="" placeholder="出发城市">
-                    </div>
-                    <div class="form-group space"></div>
-                    <div class="form-group">
-                        <input type="text" name="tcityName" class="form-control" value="" placeholder="到达城市">
-                    </div>
-                    <div class="form-group space"></div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="fightDate" name="fightDate" placeholder="去程日期">
-                    </div>
-                    <div class="form-group space"></div>
-                    <button class="button button-pill button-primary" type="submit">查询</button>
-                </form>
-            <%--</div>--%>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row clearfix">
-            <div class="col-sm-7 column">
-
+<div class="container" align="center"><%--// 搜索部分，功能未添加--%>
+    <div class="row clearfix" style="width: 900px">
+        <%--<div class="col-sm-7 column">--%>
+        <%--由上一个页面获取的城市和日期还未填入--%>
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <input type="text" name="dcityName" class="form-control" value="" placeholder="出发城市">
             </div>
-        </div>
+            <div class="form-group space"></div>
+            <div class="form-group">
+                <input type="text" name="tcityName" class="form-control" value="" placeholder="到达城市">
+            </div>
+            <div class="form-group space"></div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="fightDate" name="fightDate" placeholder="去程日期">
+            </div>
+            <div class="form-group space"></div>
+            <button class="button button-pill button-primary" type="submit">查询</button>
+        </form>
+        <%--</div>--%>
     </div>
-    <script>
-        laydate.render({
-            elem: '#fightDate' //指定元素
-        });
-    </script>
-    <script>
-        laydate.render({
-            elem: '#afightDate' //指定元素
-        });
-    </script>
+</div>
+<div class="container" align="center">
+    <div class="row clearfix" style="width: 900px">
+        <%--<div class="col-sm-7 column"></div>--%>
+        <%--一个航班的详细信息，每次要从list里拿一个信息来用--%>
+        <%--可能要用 for 循环来填--%>
+        <%
+            for(int from = 0; from < fights.size(); from++) {
+                Fights fight = fights.get(from);
+        %>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="list-group-item-heading itemHeadSize">
+                    <div class="itemHeadFightSize"><%=fight.getAlCode()%></div>
+                    <div class="itemHeadAirSize"><%=fight.getAircraftType()%></div>
+                </div>
+                <div class="item_Size">
+                    <div class="itemTimeSize">
+                        <%--出发时间和出发机场--%>
+                        <div class="item_Time">
+                            <%=fight.hmDateFormat(fight.getETD())%>
+                        </div>
+                        <div class="item_air">
+                            <%=fight.getDairportName()%>
+                        </div>
+                    </div>
+                    <div style="width: 100px;float:left;text-align: center">
+                        -------------->
+                        <%--中间分隔--%>
+                    </div>
+                    <div class="itemTimeSize">
+                        <%--终点机场和到达时间--%>
+                        <div class="item_Time">
+                            <%=fight.hmDateFormat(fight.getETA())%>
+                        </div>
+                        <div class="item_air">
+                            <%=fight.getTairportName()%>
+                        </div>
+                    </div>
+                    <div style="width: 100px;float:left">
+                        <%--预计用时--%>
+                    </div>
+                    <div >
+                        <%--价格--%>
+                    </div>
+                </div>
+                <%for(int i = 0; i <  fight.getFightShippings().size(); i++){
+                    FightShipping fightShipping = fight.getFightShippings().get(i);
+                %>
+                <div class="ship_space">
+                    <%--经济舱--%>
+                    <%if(fightShipping.getSsName() == "ec"){%>
+                    <div class="site">经济舱</div>
+                    <div class="price"><%=fightShipping.getSsPrice()%></div>
+                    <div class="choose-fight" style="margin-left: 200px;">预定</div>
+                    <div class="remark">
+                        <%if(fightShipping.getEcsqNumber() == 0){%>
+                        售空
+                        <%}else{%>
+                        剩余<%=fightShipping.getEcsqNumber()%>票
+                        <%}%>
+                    </div>
+                    <%}else if(fightShipping.getSsName() == "bc"){%>
+                    <div class="site">经济舱</div>
+                    <div class="price"><%=fightShipping.getSsPrice()%></div>
+                    <div class="choose-fight" style="margin-left: 200px;">预定</div>
+                    <div class="remark">
+                        <%if(fightShipping.getBcsqNumber() == 0){%>
+                        售空
+                        <%}else{%>
+                        剩余<%=fightShipping.getBcsqNumber()%>票
+                        <%}%>
+                    </div>
+                    <%}else{%>
+                    <div class="site">头等舱</div>
+                    <div class="price"><%=fightShipping.getSsPrice()%></div>
+                    <div class="choose-fight" style="margin-left: 200px;">预定</div>
+                    <div class="remark">
+                        <%if(fightShipping.getFcsqNumber() == 0){%>
+                        售空
+                        <%}else{%>
+                        剩余<%=fightShipping.getFcsqNumber()%>票
+                        <%}%>
+                    </div>
+                    <%}%>
+                </div>
+                <%}%>
+            </li>
+        </ul>
+        <%}%>
+    </div>
+</div>
+<script>
+    laydate.render({
+        elem: '#fightDate' //指定元素
+    });
+</script>
+<script>
+    laydate.render({
+        elem: '#afightDate' //指定元素
+    });
+</script>
 </body>
 </html>

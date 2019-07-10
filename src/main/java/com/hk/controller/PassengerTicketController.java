@@ -1,8 +1,6 @@
 package com.hk.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.hk.pojo.*;
 import com.hk.service.BookTicketService;
 import com.hk.service.LoginService;
@@ -10,11 +8,10 @@ import com.hk.service.RegisterService;
 import com.hk.service.SearchTicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.sql.Timestamp;
+import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -63,7 +60,7 @@ public class PassengerTicketController {
         String jsonFights = JSON.toJSON(fights).toString();
 //        System.out.println(jsonFights);
         mv.addObject("jsonFights", jsonFights);
-        mv.setViewName("searchBack");
+        mv.setViewName("list");
         return mv;
     }
 
@@ -100,22 +97,23 @@ public class PassengerTicketController {
     public ModelAndView registerUser(BookPeople bookPeople){
         ModelAndView mv = new ModelAndView();
         registerService.registerNewUser(bookPeople);
-        mv.setViewName("");
+        mv.setViewName("back");
         return mv;
     }
 
     //登陆验证
     @RequestMapping(value = "loginUser", method = {RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView loginUser(String bpCode, String bpPassword){
+    public ModelAndView loginUser(String bpCode, String bpPassword, HttpSession httpSession){
         ModelAndView mv = new ModelAndView();
-        int checkResult = loginService.checkLoginUser(bpCode, bpPassword);
-        if(checkResult != 0){
+        String checkResult = loginService.checkLoginUser(bpCode, bpPassword);
+        if(checkResult != null){
             //登陆成功，跳转到首页面
-            mv.setViewName("");
+            httpSession.setAttribute("bpCode", checkResult);
+            mv.setViewName("back");
         }
         else{
             //登陆失败跳转别的页面
-            mv.setViewName("");
+            mv.setViewName("back");
         }
         return mv;
     }
@@ -154,10 +152,10 @@ public class PassengerTicketController {
     @ResponseBody
     public String getCities(){
         List<City> citiesList = searchTicketService.getAllCities();
-        System.out.println(citiesList.get(0));
-        System.out.println(citiesList.size());
+//        System.out.println(citiesList.get(0));
+//        System.out.println(citiesList.size());
         String citiesJson = JSON.toJSONString(citiesList);
-        System.out.println(citiesJson);
+//        System.out.println(citiesJson);
         return citiesJson;
     }
 

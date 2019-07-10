@@ -16,12 +16,12 @@ public class LoginServiceImpl implements LoginService {
     private UserCacheUtil userCacheUtil = null;
 
     @Override
-    public int checkLoginUser(String bpCode, String bpPassword) {
+    public String checkLoginUser(String bpCode, String bpPassword) {
         BookPeople bookPeople = bookPeopleMapper.checkUser(bpCode, bpPassword);
         if(bookPeople != null){
             //用户存在则加入缓存
             userCacheUtil.cacheUser(bookPeople);
         }
-        return bookPeople==null?0:1;
+        return bookPeople==null?null:bookPeople.getBpCode();
     }
 }

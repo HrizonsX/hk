@@ -9,6 +9,8 @@
 <%@ page import="java.io.*,java.util.*" %>
 <html>
 <head>
+    <script src="//g.alicdn.com/sd/smartCaptcha/0.0.4/index.js"></script>
+    <script src="//g.alicdn.com/sd/quizCaptcha/0.0.1/index.js"></script>
 
     <script language="JavaScript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
     <script language="JavaScript" src="https://cdn.bootcss.com/jquery-json/2.6.0/jquery.json.min.js"></script>
@@ -19,21 +21,38 @@
     <script src="form.js" type="text/javascript"></script>
     <title>厦门航空</title>
     <link href="css/main.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/citySet.js"></script>
     <link href="css/button.css" type="text/css" rel="stylesheet"/>
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <script src="js/img_ver.js"></script>
-    <style>
-        .verBox {
-            width: 100%;
-            height: 230px;
-            text-align: center;
-            left: 0px;
-            top: 5px;
-            opacity: 1;
-            transition: all 0.8s;
-            padding-top: 7px;
+    <script type="text/javascript" language="JavaScript">
+        function ajaxValidate() {
+            var bpCode = $("#UbpCode").val();
+            $.ajax({
+                type: "POST",
+                url: "./passengerTicket/registerUser1.do",//提交地址
+                contentType: 'text/plain;charset=utf-8', //设置请求头信息
+                data: bpCode,//提交数据
+                dataType: "text",//返回text内容
+                async: false,
+                success: function (data) {
+                    if ("no" == data) {
+                        //后端传来的msg的值是no,不能注册。反之。
+                        $("#remind").html("<font color='red'>用户名已被注册</font>");
+                        $("#submit").attr("disabled", true);
+                    }
+                    if ("yes" == data) {
+                        //如果没有被注册，将提示语清空。
+                        $("#remind").html("用户名可用");
+                        $("#submit").attr("disabled", false);
+                    }
+                },
+                error: function (data) {
+                    alert("发生了一个错误");
+                }
+            });
         }
-    </style>
+    </script>
 </head>
 <body>
 <%--导航栏部分--%>
@@ -111,11 +130,13 @@
                                                        class="form-control" placeholder="请输入密码"/>
                                             </div>
                                         </div>
-                                            <div class="verBox">
-                                                <div id="imgVer" style="display:inline-block;"></div>
-                                            </div>
+                                        <div class="verBox">
+                                            <div id="imgVer" style="display:inline-block;"></div>
+                                        </div>
                                         <%--提交按钮--%>
-                                        <button id="loginSubmit" class="button button-pill button-primary" type="submit" disabled="disabled">登录</button>
+                                        <button id="loginSubmit" class="button button-pill button-primary" type="submit"
+                                                disabled="disabled">登录
+                                        </button>
                                     </form>
                                 </div>
                                 <%--<div class="modal-footer">--%>
@@ -147,16 +168,19 @@
                                 <%--模态框主体部分--%>
                                 <div class="modal-body">
                                     <%--主体内的表单，提交位置和方法还没动--%>
-                                    <form class="form-horizontal" role="form" method="post" action="#" id="signUp"
+                                    <form class="form-horizontal" role="form" method="post"
+                                          action="./passengerTicket/registerUser.do" id="signUp"
                                           name="signUp">
                                         <%--用户名--%>
                                         <div class="form-group">
                                             <label for="UbpCode" class="col-sm-3 control-label">用户名</label>
                                             <div class="col-sm-9">
-                                                <input type="text" id="UbpCode" name="pcCode" class="form-control"
-                                                       placeholder="请输入用户名">
+                                                <input type="text" id="UbpCode" name="bpCode" class="form-control"
+                                                       placeholder="请输入用户名" onblur="ajaxValidate()"/>
+                                                <div id="remind" color="red"></div>
                                             </div>
                                         </div>
+
                                         <%--密码--%>
                                         <div class="form-group">
                                             <label for="UbpPassword" class="col-sm-3 control-label">密码</label>
@@ -188,7 +212,9 @@
                                             </div>
                                         </div>
                                         <%--提交按钮--%>
-                                        <button class="button button-pill button-primary" type="submit">注册</button>
+                                        <button class="button button-pill button-primary" type="submit" id="submit"
+                                                disabled="disabled">注册
+                                        </button>
                                     </form>
                                 </div>
                                 <%--<div class="modal-footer">--%>
@@ -203,7 +229,7 @@
                 <%} else {%>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <%=bpCode%>,你好
+                        <%=bpCode%>, 你好
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
@@ -218,7 +244,7 @@
 </nav>
 <%--主体部分--%>
 <%--网格布局--%>
-<div class="container">
+<div class="container" align="center" style="margin-top: 20px">
     <div class="row clearfix">
         <div class="col-md-3 column">
         </div>
@@ -256,20 +282,30 @@
             <div class="tab-content vertical-tab-content col-xs-9">
                 <div role="tabpanel" class="tab-pane active" id="tab1">
                     <%--查询航班的，用于订票--%>
-                    <form class="form-horizontal" role="form" method="post" action="/test" name="bookForm"
+                    <form class="form-horizontal" role="form" method="post" action="./passengerTicket/searchTicket.do" name="bookForm"
                           onsubmit="return notNull()">
                         <div class="form-group">
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="dcityName" name="dcityName"
-                                       placeholder="出发城市">
-                            </div>
+                                <input class="form-control" name="dcityName" id="dcityName" type="text"
+                                       placeholder="出发城市"
+                                       autocomplete="off" readonly="true"></div>
+                            <script type="text/javascript">
+                                $("#dcityName").click(function (e) {
+                                    SelCity(this, e);
+                                });
+                            </script>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="tcityName" name="tcityName"
-                                       placeholder="到达城市" data-container="body" data-toggle="popover"
-                                       data-placement="bottom">
-                            </div>
+                                <input class="form-control" name="tcityName" id="tcityName" type="text"
+                                       placeholder="到达城市"
+                                       autocomplete="off" readonly="true" data-container="body" data-toggle="popover"
+                                       data-placement="bottom"></div>
+                            <script type="text/javascript">
+                                $("#tcityName").click(function (e) {
+                                    SelCity(this, e);
+                                });
+                            </script>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-10">
@@ -310,30 +346,82 @@
                     </form>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="tab3">
+                    <div class="tabbable" id="tabs">
+                        <ul class="nav nav-pills">
+                            <li class="active">
+                                <a href="#panel1" data-toggle="tab">按航班线路</a>
+                            </li>
+                            <li>
+                                <a href="#panel2" data-toggle="tab">按航班号</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="panel1">
+                                <form class="form-horizontal" role="form" method="post" action="#">
+                                    <div class="form-group" style="margin-top:10px">
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="adcityName" name="dcityName"
+                                                   placeholder="出发城市">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="atcityName" name="tcityName"
+                                                   placeholder="到达城市">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="afightDate" name="fightDate"
+                                                   placeholder="去程日期">
+                                        </div>
+                                    </div>
+                                    <div class="btn_right size">
+                                        <button class="button button-pill button-primary" type="submit">查询航班</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="panel2">
+                                <form class="form-horizontal" role="form" method="post" action="#">
+                                    <div class="form-group" style="margin-top:10px">
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" name="airlineNumber"
+                                                   placeholder="请输入航班号">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" name="fightDate" placeholder="去程日期">
+                                        </div>
+                                    </div>
+                                    <div class="btn_right size">
+                                        <button class="button button-pill button-primary" type="submit">查询航班</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <%--查询航班的表单，action还没写--%>
-                    <form class="form-horizontal" role="form" method="post" action="#">
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="adcityName" name="dcityName"
-                                       placeholder="出发城市">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="atcityName" name="tcityName"
-                                       placeholder="到达城市">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="afightDate" name="fightDate"
-                                       placeholder="去程日期">
-                            </div>
-                        </div>
-                        <div class="btn_right size">
-                            <button class="button button-pill button-primary" type="submit">查询航班</button>
-                        </div>
-                    </form>
+                    <%--<form class="form-horizontal" role="form" method="post" action="#">--%>
+                    <%--<div class="form-group">--%>
+                    <%--<div class="col-sm-10">--%>
+                    <%--<input type="text" class="form-control" id="adcityName" name="dcityName" placeholder="出发城市">--%>
+                    <%--</div>--%>
+                    <%--</div>--%>
+                    <%--<div class="form-group">--%>
+                    <%--<div class="col-sm-10">--%>
+                    <%--<input type="text" class="form-control" id="atcityName" name="tcityName" placeholder="到达城市">--%>
+                    <%--</div>--%>
+                    <%--</div>--%>
+                    <%--<div class="form-group">--%>
+                    <%--<div class="col-sm-10">--%>
+                    <%--<input type="text" class="form-control" id="afightDate" name="fightDate" placeholder="去程日期">--%>
+                    <%--</div>--%>
+                    <%--</div>--%>
+                    <%--<div class="btn_right size">--%>
+                    <%--<button class="button button-pill button-primary" type="submit">查询航班</button>--%>
+                    <%--</div>--%>
+                    <%--</form>--%>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="tab4">施工中</div>
             </div>
@@ -342,7 +430,6 @@
         </div>
     </div>
 </div>
-
 <script>
     imgVer({
         el: '$("#imgVer")',
@@ -355,7 +442,7 @@
         ],
         success: function () {
             //验证成功后做的事情
-            $("#loginSubmit").attr("disabled",false);
+            $("#loginSubmit").attr("disabled", false);
         },
         error: function () {
             // alert("这么简单的拼图都不会");
