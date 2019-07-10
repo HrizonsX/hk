@@ -3,7 +3,7 @@ var province;
 $(function () {
 	$.ajax({
 		type: "POST",
-		url: "./passengerTicket/getCities.do",//提交地址
+		url: "/hk_war_exploded/passengerTicket/getCities.do",//提交地址
 		contentType: 'application/json;charset=utf-8', //设置请求头信息
 		dataType: "json",//返回json内容
 		async: false,
