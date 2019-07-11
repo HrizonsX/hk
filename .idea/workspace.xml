@@ -7,20 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5e45cc8-98f3-4240-998c-d28d218aa716" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Insurance2.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/admin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/book.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hk/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hk/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hk/controller/PassengerTicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hk/controller/PassengerTicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hk/pojo/Fights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hk/pojo/Fights.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hk/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hk/service/impl/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hk/service/impl/RegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hk/service/impl/RegisterServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/dynamic.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dynamic.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/test.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hk/controller/PassengerTicketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hk/controller/PassengerTicketController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hk/pojo/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/Book.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hk/pojo/Fights.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hk/pojo/Fights.class" afterDir="false" />
@@ -84,11 +72,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="955">
-              <caret line="69" column="120" selection-start-line="69" selection-start-column="120" selection-end-line="69" selection-end-column="120" />
+            <state relative-caret-position="151">
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="33" column="15" lean-forward="true" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -205,10 +202,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/book.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/Insurance2.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/hk/controller/PassengerTicketController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/test.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/hk/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/admin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -505,7 +502,7 @@
       <workItem from="1562723741569" duration="34239000" />
       <workItem from="1562807247874" duration="7474000" />
       <workItem from="1562817014276" duration="25630000" />
-      <workItem from="1562860735681" duration="1998000" />
+      <workItem from="1562860735681" duration="2115000" />
     </task>
     <task id="LOCAL-00001" summary="7-5 4:43提交">
       <created>1562316230618</created>
@@ -598,11 +595,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562820672512</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="7-12 12:34提交">
+      <created>1562862882455</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1562862882455</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288397000" />
+    <option name="totallyTimeSpent" value="288514000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -615,8 +619,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-85" y="26" width="1680" height="965" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49789914" visible="true" weight="0.23260073" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49789914" visible="true" weight="0.23260073" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -626,7 +631,7 @@
       <window_info id="Web" order="7" sideWeight="0.5021008" side_tool="true" weight="0.23015873" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.498779" visible="true" weight="0.45475373" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498779" visible="true" weight="0.45475373" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -746,7 +751,8 @@
     <MESSAGE value="7-11 10:11提交" />
     <MESSAGE value="7-11 12:39提交" />
     <MESSAGE value="7-11 12:50提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="7-11 12:50提交" />
+    <MESSAGE value="7-12 12:34提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="7-12 12:34提交" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
@@ -1077,13 +1083,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hk/mapper/FightShippingMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1149,8 +1148,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="955">
-          <caret line="69" column="120" selection-start-line="69" selection-start-column="120" selection-end-line="69" selection-end-column="120" />
+        <state relative-caret-position="151">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="33" column="15" lean-forward="true" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
         </state>
       </provider>
     </entry>
