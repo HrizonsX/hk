@@ -78,7 +78,12 @@
 
 .itemHeadSize{
     height: 50px;
-    background: #7de9ff;
+    background-color: #bdd6ea;
+    background: url("../png/tail.png") no-repeat 460px 0px;
+    background-size: 400px 50px;
+}
+.test{
+    background-color: #bdd6ea;
 }
 
 .itemHeadFightSize{
@@ -98,7 +103,7 @@
 
 .itemTimeSize{
     height: 80px;
-    width: 200px;
+    width: 100px;
     float: left;
 }
 
@@ -114,7 +119,7 @@
 
 .item_Size{
     height: 80px;
-    background: #a3fffa;
+    background: #e1f0fd
 }
 
 .ship_space{
@@ -129,20 +134,21 @@
     margin-left: 20px;
     margin-right: 20px;
     word-break: keep-all;
-    font-size: 20px;
+    font-size: 15px;
     float: left;
 }
 
 .price{
     width:100px;
     margin-left: 200px;
-    font-size: 20px;
+    font-size: 15px;
     float: left;
+    color: #ff8214;
 }
 
 .choose-fight{
     text-align: center;
-    font-size: 20px;
+    font-size: 10px;
     width: 80px;
     height: 26px;
     line-height: 26px;
@@ -154,8 +160,9 @@
 }
 
 .remark{
+    margin-top: 5px;
     margin-left: 20px;
-    font-size: 15px;
+    font-size: 10px;
     float: left;
     color: red;
 }

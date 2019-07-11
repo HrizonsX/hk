@@ -128,4 +128,14 @@ public class BookTicketServiceImpl implements BookTicketService {
         }
         return new ArrayList<Insurance>(map.values());
     }
+
+    @Override
+    public List<Book> getBooksByBpCode(String bpCode) {
+        List<Book> list = bookMapper.getBooksByBpCode(bpCode);
+        System.out.println(list.get(0));
+        System.out.println(list.get(0).getShippingSpace());
+        System.out.println(list.get(0).getBookBills().get(0));
+        System.out.println(list.get(0).getBookBills().get(0).getPassenger());
+        return list;
+    }
 }

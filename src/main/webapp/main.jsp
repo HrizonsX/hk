@@ -233,7 +233,7 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">我的订单</a></li>
+                        <li><a href="/hk_war_exploded/passengerTicket/getBooks.do?bpCode=<%=bpCode%>">我的订单</a></li>
                         <li><a href="#">注销</a></li>
                     </ul>
                 </li>

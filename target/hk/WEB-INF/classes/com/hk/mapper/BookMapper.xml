@@ -19,16 +19,7 @@
 
         <association property="shippingSpace" column="{alCode=Shi_al_code,ssCode=ss_code,fightDate=Shi_fight_date}"
                      select="com.hk.mapper.ShippingSpaceMapper.getshippingSpace" fetchType="eager"/>
-        <collection property="bookBills" ofType="com.hk.pojo.BookBill" fetchType="lazy">
-            <id property="bookCode" column="book_code"/>
-            <id property="bbCode" column="bb_code"/>
-            <result property="passCode" column="pass_code"/>
-            <result property="bbPrice" column="bb_price"/>
-            <result property="bbState" column="bb_state"/>
-            <association property="passenger" column="pass_code" select="com.hk.mapper.PassengerMapper.findPassengerByPassCode"
-            fetchType="lazy"/>
-        </collection>
-
+        <collection property="bookBills" ofType="com.hk.pojo.BookBill" fetchType="lazy" column="book_code" select="com.hk.mapper.BookBillMapper.getBookBillsByCode"/>
 
     </resultMap>
     <select id="getBookByCode" resultMap="bookMap" parameterType="long">
@@ -43,4 +34,8 @@
     <update id="updateBookState" parameterType="long">
         update Book set book_state=1 where book_code=#{bookCode}
     </update>
+
+    <select id="getBooksByBpCode" resultMap="bookMap">
+        select * from Book where bp_code=#{bpCode}
+    </select>
 </mapper>

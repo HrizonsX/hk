@@ -9,4 +9,5 @@ public interface BookTicketService {
     public int buyTicketInsurance(List<InsuranceOrder> insuranceOrders);
     //把保险缓存，直接返回所有保险类型
     public List<Insurance> getInsurancesInfo();
+    public List<Book> getBooksByBpCode(String bpCode);
 }

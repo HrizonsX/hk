@@ -94,4 +94,19 @@ public class ShippingSpace {
     public void setSsRemark(String ssRemark) {
         this.ssRemark = ssRemark;
     }
+
+    @Override
+    public String toString() {
+        return "ShippingSpace{" +
+                "alCode='" + alCode + '\'' +
+                ", fightDate=" + fightDate +
+                ", ssCode='" + ssCode + '\'' +
+                ", ssName='" + ssName + '\'' +
+                ", ssMeal='" + ssMeal + '\'' +
+                ", ssReturnTicket=" + ssReturnTicket +
+                ", ssChangeTicket=" + ssChangeTicket +
+                ", ssPrice=" + ssPrice +
+                ", ssRemark='" + ssRemark + '\'' +
+                '}';
+    }
 }

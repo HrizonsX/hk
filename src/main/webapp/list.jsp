@@ -5,6 +5,7 @@
 <%@ page import="com.hk.pojo.FightShipping" %><%--
   Created by IntelliJ IDEA.
   User: admin
+
   Date: 2019/7/8
   Time: 16:21
   To change this template use File | Settings | File Templates.
@@ -58,18 +59,19 @@
 
 <body>
 <%
-    String jsonFights = (String)request.getAttribute("jsonFights");
+    String jsonFights = (String) request.getAttribute("jsonFights");
     List<Fights> fights = JSON.parseArray(jsonFights, Fights.class);
 %>
 
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <%
-        String bpCode = (String)session.getAttribute("bpCode");
+        String bpCode = (String) session.getAttribute("bpCode");
     %>
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="/hk_war_exploded/main.jsp">
-                <img src="${pageContext.request.contextPath}/png/xmhk.png" class="img-responsive headImgHigh" alt="Cinque Terre">
+                <img src="${pageContext.request.contextPath}/png/xmhk.png" class="img-responsive headImgHigh"
+                     alt="Cinque Terre">
             </a>
         </div>
         <div class="navbar-collapse collapse" style="text-align:center">
@@ -96,56 +98,55 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right" style="display:inline-block;float:none;">
-                <%if(bpCode == null){%>
+                <%if (bpCode == null) {%>
                 <li>
                     <%--登录词条触发模态框--%>
                     <a data-toggle="modal" data-target="#signInModal" href="#">登录</a>
                     <%--模态框内的表单设计，包括提交及方法--%>
                     <%--<form method="post" action="#" class="form-horizontal" role="form" id="signIn" onsubmit="return">--%>
                     <%--登录模态框设置属性，其中data-backdrop 为设置不被覆盖--%>
-                    <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true" data-backdrop="false">
+                    <div class="modal fade" id="signInModal" tabindex="-1" role="dialog"
+                         aria-labelledby="signInModalLabel" aria-hidden="true" data-backdrop="false">
                         <div class="modal-dialog">
                             <div class="modal-content modalWidth">
                                 <%--模态框头部--%>
                                 <div class="modal-header modalHeader">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                        &times;
+                                    </button>
                                     <h4>登录</h4>
                                 </div>
                                 <%--模态框主体部分--%>
-                                    <div class="modal-body">
-                                        <%--主体内的表单，提交位置和方法记得改--%>
-                                        <form class="form-horizontal" role="form" method="post"
-                                              action="/hk_war_exploded/passengerTicket/loginUser.do" id="signIn" name="signIn">
-                                            <%--用户名--%>
-                                            <div class="form-group">
-                                                <label for="bpCode" class="col-sm-3 control-label">用户名</label>
-                                                <div class="col-sm-9">
-                                                    <input type="text" id="bpCode" name="bpCode" class="form-control"
-                                                           placeholder="请输入用户名">
-                                                </div>
+                                <div class="modal-body">
+                                    <%--主体内的表单，提交位置和方法记得改--%>
+                                    <form class="form-horizontal" role="form" method="post"
+                                          action="/hk_war_exploded/passengerTicket/loginUser.do" id="signIn"
+                                          name="signIn">
+                                        <%--用户名--%>
+                                        <div class="form-group">
+                                            <label for="bpCode" class="col-sm-3 control-label">用户名</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" id="bpCode" name="bpCode" class="form-control"
+                                                       placeholder="请输入用户名">
                                             </div>
-                                            <%--密码--%>
-                                            <div class="form-group">
-                                                <label for="bpPassword" class="col-sm-3 control-label">密码</label>
-                                                <div class="col-sm-9">
-                                                    <input type="password" id="bpPassword" name="bpPassword"
-                                                           class="form-control" placeholder="请输入密码"/>
-                                                </div>
+                                        </div>
+                                        <%--密码--%>
+                                        <div class="form-group">
+                                            <label for="bpPassword" class="col-sm-3 control-label">密码</label>
+                                            <div class="col-sm-9">
+                                                <input type="password" id="bpPassword" name="bpPassword"
+                                                       class="form-control" placeholder="请输入密码"/>
                                             </div>
-                                            <div class="verBox">
-                                                <div id="imgVer" style="display:inline-block;"></div>
-                                            </div>
-                                            <%--提交按钮--%>
-                                            <button id="loginSubmit" class="button button-pill button-primary" type="submit"
-                                                    disabled="disabled">登录
-                                            </button>
-                                        </form>
-                                    </div>
-                                <%--<div class="modal-footer">--%>
-                                <%--<!--  模态框底部样式，一般是提交或者确定按钮 -->--%>
-                                <%--<button type="submit" class="btn btn-info">登录</button>--%>
-                                <%--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>--%>
-                                <%--</div>--%>
+                                        </div>
+                                        <div class="verBox">
+                                            <div id="imgVer" style="display:inline-block;"></div>
+                                        </div>
+                                        <%--提交按钮--%>
+                                        <button id="loginSubmit" class="button button-pill button-primary" type="submit"
+                                                disabled="disabled">登录
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -156,66 +157,69 @@
                     <%--注册词条触发模态框--%>
                     <a data-toggle="modal" data-target="#signUpModal" href="#">注册</a>
                     <%--模态框内的表单设计及提交方法--%>
-                    <div  class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true" data-backdrop="false">
+                    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog"
+                         aria-labelledby="signUpModalLabel" aria-hidden="true" data-backdrop="false">
                         <div class="modal-dialog">
                             <div class="modal-content modalWidth">
                                 <%--模态框头部--%>
                                 <div class="modal-header modalHeader">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                        &times;
+                                    </button>
                                     <h4>注册</h4>
                                 </div>
                                 <%--模态框主体部分--%>
-                                    <div class="modal-body">
-                                        <%--主体内的表单，提交位置和方法还没动--%>
-                                        <form class="form-horizontal" role="form" method="post"
-                                              action="/hk_war_exploded/passengerTicket/registerUser.do" id="signUp"
-                                              name="signUp">
-                                            <%--用户名--%>
-                                            <div class="form-group">
-                                                <label for="UbpCode" class="col-sm-3 control-label">用户名</label>
-                                                <div class="col-sm-9">
-                                                    <input type="text" id="UbpCode" name="bpCode" class="form-control"
-                                                           placeholder="请输入用户名" onblur="ajaxValidate()"/>
-                                                    <div id="remind" color="red"></div>
-                                                </div>
+                                <div class="modal-body">
+                                    <%--主体内的表单，提交位置和方法还没动--%>
+                                    <form class="form-horizontal" role="form" method="post"
+                                          action="/hk_war_exploded/passengerTicket/registerUser.do" id="signUp"
+                                          name="signUp">
+                                        <%--用户名--%>
+                                        <div class="form-group">
+                                            <label for="UbpCode" class="col-sm-3 control-label">用户名</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" id="UbpCode" name="bpCode" class="form-control"
+                                                       placeholder="请输入用户名" onblur="ajaxValidate()"/>
+                                                <div id="remind" color="red"></div>
                                             </div>
+                                        </div>
 
-                                            <%--密码--%>
-                                            <div class="form-group">
-                                                <label for="UbpPassword" class="col-sm-3 control-label">密码</label>
-                                                <div class="col-sm-9">
-                                                    <input type="password" id="UbpPassword" name="bpPassword"
-                                                           class="form-control" placeholder="请输入密码"/>
-                                                </div>
+                                        <%--密码--%>
+                                        <div class="form-group">
+                                            <label for="UbpPassword" class="col-sm-3 control-label">密码</label>
+                                            <div class="col-sm-9">
+                                                <input type="password" id="UbpPassword" name="bpPassword"
+                                                       class="form-control" placeholder="请输入密码"/>
                                             </div>
-                                            <%--姓名--%>
-                                            <div class="form-group">
-                                                <label for="UbpName" class="col-sm-3 control-label">姓名</label>
-                                                <div class="col-sm-9">
-                                                    <input type="text" id="UbpName" name="bpName" class="form-control"
-                                                           placeholder="请输入姓名">
-                                                </div>
+                                        </div>
+                                        <%--姓名--%>
+                                        <div class="form-group">
+                                            <label for="UbpName" class="col-sm-3 control-label">姓名</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" id="UbpName" name="bpName" class="form-control"
+                                                       placeholder="请输入姓名">
                                             </div>
-                                            <div class="form-group">
-                                                <label for="UbpPhone" class="col-sm-3 control-label">电话</label>
-                                                <div class="col-sm-9">
-                                                    <input type="text" id="UbpPhone" name="bpPhone" class="form-control"
-                                                           placeholder="请输入联系电话">
-                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="UbpPhone" class="col-sm-3 control-label">电话</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" id="UbpPhone" name="bpPhone" class="form-control"
+                                                       placeholder="请输入联系电话">
                                             </div>
-                                            <div class="form-group">
-                                                <label for="UbpEmail" class="col-sm-3 control-label">电子邮箱</label>
-                                                <div class="col-sm-9">
-                                                    <input type="email" id="UbpEmail" name="bpEmail" class="form-control"
-                                                           placeholder="请输入电子邮箱">
-                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="UbpEmail" class="col-sm-3 control-label">电子邮箱</label>
+                                            <div class="col-sm-9">
+                                                <input type="email" id="UbpEmail" name="bpEmail" class="form-control"
+                                                       placeholder="请输入电子邮箱">
                                             </div>
-                                            <%--提交按钮--%>
-                                            <button class="button button-pill button-primary" type="submit" id="submit"
-                                                    disabled="disabled">注册
-                                            </button>
-                                        </form>
-                                    </div>
+                                        </div>
+                                        <%--提交按钮--%>
+                                        <button class="button button-pill button-primary" type="submit" id="submit"
+                                                disabled="disabled">注册
+                                        </button>
+                                    </form>
+                                </div>
                                 <%--<div class="modal-footer">--%>
                                 <%--<!--  模态框底部样式，一般是提交或者确定按钮 -->--%>
                                 <%--<button type="submit" class="btn btn-info">登录</button>--%>
@@ -225,14 +229,14 @@
                         </div>
                     </div>
                 </li>
-                <%}else{%>
+                <%} else {%>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <%=bpCode%>,你好
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">我的订单</a> </li>
+                        <li><a href="/hk_war_exploded/passengerTicket/getBooks.do?bpCode=<%=bpCode%>">我的订单</a></li>
                         <li><a href="#">注销</a></li>
                     </ul>
                 </li>
@@ -270,16 +274,26 @@
         <%--一个航班的详细信息，每次要从list里拿一个信息来用--%>
         <%--可能要用 for 循环来填--%>
         <%
-            for(int from = 0; from < fights.size(); from++) {
+            for (int from = 0; from < fights.size(); from++) {
                 Fights fight = fights.get(from);
         %>
         <ul class="list-group">
             <li class="list-group-item">
-                <div class="list-group-item-heading itemHeadSize">
-                    <div class="itemHeadFightSize"><%=fight.getAlCode()%></div>
-                    <div class="itemHeadAirSize"><%=fight.getAircraftType()%></div>
+                <div class="itemHeadSize test">
+                    <div style="width: 50px;height: 50px;float: left">
+                        <img src="${pageContext.request.contextPath}/png/logo.png"
+                             style="width: 43px;height: 20px;margin-top: 14px" align="center">
+                    </div>
+                    <div class="itemHeadFightSize" style="margin-top: 7px"><%=fight.getAlCode()%>
+                    </div>
+                    <div class="itemHeadAirSize" style="float: left;margin-top: 11px; font-size: 18px"><%=fight.getAircraftType()%>
+                    </div>
                 </div>
-                <div class="item_Size">
+                <div class="item_Size" style="border-top-style:solid;border-width: 5px;border-color: #e1f0fd">
+                    <div style="width: 50px;height: 80px;float: left">
+                        <img src="${pageContext.request.contextPath}/png/takeoff.png"
+                             style="width: 21px;height: 21px;margin-top: 15px" align="right">
+                    </div>
                     <div class="itemTimeSize">
                         <%--出发时间和出发机场--%>
                         <div class="item_Time">
@@ -289,9 +303,13 @@
                             <%=fight.getDairportName()%>
                         </div>
                     </div>
-                    <div style="width: 100px;float:left;text-align: center">
-                        -------------->
-                        <%--中间分隔--%>
+                    <div style="width: 150px;float:left;text-align: center">
+                        <img src="${pageContext.request.contextPath}/png/dot.png"
+                             style="margin-top: 25px;margin-left: 10px">
+                    </div>
+                    <div style="width: 50px;height: 80px;float: left">
+                        <img src="${pageContext.request.contextPath}/png/landing.png"
+                             style="width: 21px;height: 21px;margin-top: 15px" align="right">
                     </div>
                     <div class="itemTimeSize">
                         <%--终点机场和到达时间--%>
@@ -305,45 +323,49 @@
                     <div style="width: 100px;float:left">
                         <%--预计用时--%>
                     </div>
-                    <div >
+                    <div>
                         <%--价格--%>
                     </div>
                 </div>
-                <%for(int i = 0; i <  fight.getFightShippings().size(); i++){
-                    FightShipping fightShipping = fight.getFightShippings().get(i);
+                <%
+                    for (int i = 0; i < fight.getFightShippings().size(); i++) {
+                        FightShipping fightShipping = fight.getFightShippings().get(i);
                 %>
                 <div class="ship_space">
                     <%--经济舱--%>
-                    <%if(fightShipping.getSsName() == "ec"){%>
+                    <%if (fightShipping.getSsName().compareTo("ec") == 0) {%>
                     <div class="site">经济舱</div>
-                    <div class="price"><%=fightShipping.getSsPrice()%></div>
+                    <div class="price">¥ <%=fightShipping.getSsPrice()%>
+                    </div>
                     <div class="choose-fight" style="margin-left: 200px;">预定</div>
                     <div class="remark">
-                        <%if(fightShipping.getEcsqNumber() == 0){%>
+                        <%if (fightShipping.getEcsqNumber() == 0) {%>
                         售空
-                        <%}else{%>
+                        <%} else {%>
                         剩余<%=fightShipping.getEcsqNumber()%>票
                         <%}%>
                     </div>
-                    <%}else if(fightShipping.getSsName() == "bc"){%>
-                    <div class="site">经济舱</div>
-                    <div class="price"><%=fightShipping.getSsPrice()%></div>
+                    <%} else if (fightShipping.getSsName().compareTo("bc") == 0) {%>
+                    <div class="site">商务舱</div>
+                    <div class="price">¥ <%=fightShipping.getSsPrice()%>
+                    </div>
                     <div class="choose-fight" style="margin-left: 200px;">预定</div>
                     <div class="remark">
-                        <%if(fightShipping.getBcsqNumber() == 0){%>
+                        <%if (fightShipping.getBcsqNumber() == 0) {%>
                         售空
-                        <%}else{%>
+                        <%} else {%>
                         剩余<%=fightShipping.getBcsqNumber()%>票
                         <%}%>
                     </div>
-                    <%}else{%>
+                    <%} else {%>
                     <div class="site">头等舱</div>
-                    <div class="price"><%=fightShipping.getSsPrice()%></div>
+                    <div class="price">¥ <%=fightShipping.getSsPrice()%>
+                    </div>
                     <div class="choose-fight" style="margin-left: 200px;">预定</div>
                     <div class="remark">
-                        <%if(fightShipping.getFcsqNumber() == 0){%>
+                        <%if (fightShipping.getFcsqNumber() == 0) {%>
                         售空
-                        <%}else{%>
+                        <%} else {%>
                         剩余<%=fightShipping.getFcsqNumber()%>票
                         <%}%>
                     </div>

@@ -61,4 +61,16 @@ public class BookBill {
     public void setBbState(int bbState) {
         this.bbState = bbState;
     }
+
+    @Override
+    public String toString() {
+        return "BookBill{" +
+                "bookCode=" + bookCode +
+                ", bbCode=" + bbCode +
+                ", passCode=" + passCode +
+                ", bbPrice=" + bbPrice +
+                ", bbState=" + bbState +
+                ", passenger=" + passenger +
+                '}';
+    }
 }

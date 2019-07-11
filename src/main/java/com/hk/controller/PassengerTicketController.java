@@ -179,6 +179,18 @@ public class PassengerTicketController {
         return citiesJson;
     }
 
+    //返回用户订单列表的json
+    @RequestMapping(value = "/getBooks", method = {RequestMethod.GET, RequestMethod.POST})
+    public ModelAndView getBooks(String bpCode){
+        ModelAndView mv = new ModelAndView();
+//        System.out.println(fights);
+        List<Book> books = bookTicketService.getBooksByBpCode(bpCode);
+        String jsonBooks = JSON.toJSON(books).toString();
+//        System.out.println(jsonFights);
+        mv.addObject("jsonBooks", jsonBooks);
+        mv.setViewName("myBook");
+        return mv;
+    }
 
 
 }

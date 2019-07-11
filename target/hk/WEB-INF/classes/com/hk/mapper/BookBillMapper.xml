@@ -8,6 +8,8 @@
         <result property="passCode" column="pass_code"/>
         <result property="bbPrice" column="bb_price"/>
         <result property="bbState" column="bb_state"/>
+        <association property="passenger" column="pass_code" select="com.hk.mapper.PassengerMapper.findPassengerByPassCode"
+                     fetchType="lazy"/>
     </resultMap>
     <select id="getBookBillsByCode" parameterType="long" resultMap="bookBillMap">
         select * from Book_Bill where book_code=#{bookCode}

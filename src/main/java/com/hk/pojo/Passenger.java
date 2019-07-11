@@ -75,4 +75,17 @@ public class Passenger implements Serializable {
     public void setPassState(int passState) {
         this.passState = passState;
     }
+
+    @Override
+    public String toString() {
+        return "Passenger{" +
+                "passCode=" + passCode +
+                ", ptCode='" + ptCode + '\'' +
+                ", passName='" + passName + '\'' +
+                ", passID='" + passID + '\'' +
+                ", passPhone='" + passPhone + '\'' +
+                ", passRemark='" + passRemark + '\'' +
+                ", passState=" + passState +
+                '}';
+    }
 }
