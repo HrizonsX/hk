@@ -7,7 +7,7 @@
         <id property="alCode" column="al_code"/>
         <id property="fightDate" column="fight_date"/>
         <result property="aircraftCode" column="aircraft_code"/>
-        <result property="bcspNumber" column="bcsp_number"/>
+        <result property="bcspNumber" column="bcsq_number"/>
         <result property="ecsqNumber" column="ecsq_number"/>
         <result property="fcsqNumber" column="fcsq_number"/>
         <result property="fightState" column="fight_state"/>
@@ -34,7 +34,7 @@
     </update>
 
     <insert id="addFight" parameterType="com.hk.pojo.Fight">
-        insert into Fight(al_code, fight_date, aircraft_code, bcsp_number, ecsq_number, fcsq_number, fight_state, ATD, ATA, ETD, ETA)
+        insert into Fight(al_code, fight_date, aircraft_code, bcsq_number, ecsq_number, fcsq_number, fight_state, ATD, ATA, ETD, ETA)
         values(#{alCode}, #{fightDate}, #{aircraftCode}, #{bcspNumber}, #{ecsqNumber}, #{fcsqNumber}, #{fightState}, #{ATD}, #{ATA}, #{ETD}, #{ETA})
     </insert>
 
