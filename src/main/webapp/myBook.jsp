@@ -71,7 +71,7 @@
     %>
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="main.jsp">
+            <a class="navbar-brand" href="/hk_war_exploded/main.jsp">
                 <img src="${pageContext.request.contextPath}/png/xmhk.png" class="img-responsive headImgHigh" alt="Cinque Terre">
             </a>
         </div>
