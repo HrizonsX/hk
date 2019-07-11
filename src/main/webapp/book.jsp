@@ -51,9 +51,9 @@
             bookParams.bpCode = $("input[name='bpCode']").val();
             bookParams.bookNumber = $("input[name='bookNumber']").val();
             bookParams.bookTotal = $("input[name='bookTotal']").val();
-            alert(bookParams.alCode);
+            // alert(bookParams.alCode);
             bookParams.passengerParams = customerArray;
-            alert(bookParams.passengerParams);
+            // alert(bookParams.passengerParams);
             $.ajax({
                 url: "./passengerTicket/bookTicket2.do",
                 type: "POST",
@@ -450,7 +450,7 @@
                 <input type="hidden" name="ssCode" value="<%=request.getParameter("ssCode")%>">
                 <input type="hidden" name="bpCode" value="<%=bpCode%>">
                 <input type="hidden" id="bookNumber" name="bookNumber" value="1">
-                <input type="hidden" id="bookTotal" value="">
+                <input type="hidden" id="bookTotal" name="bookTotal" value="">
             </div>
             <div id="formPane1" style="display: none;border-top: 1px solid #000000">
                 <div class="form-group" style="margin-top: 10px">

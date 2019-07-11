@@ -38,10 +38,10 @@
                         ins = obj[j].value;
                     }
                 }
-                alert(ins);
+                // alert(ins);
                 var bookCode = document.getElementsByName("bookCode")[i].value;
                 var bbCode = document.getElementsByName("bbCode")[i].value;
-                alert()
+                // alert()
                 insArray.push({bookCode: bookCode, bbCode: bbCode, insuranceCode: ins});
             }
             bookParams.insuranceOrders = insArray;
