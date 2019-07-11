@@ -384,12 +384,12 @@
                     <%} else if (fight.getFightState() == 3) {%>
                     <td align="center" style="vertical-align:middle;font-size:15px">
                         <p style="color: gray;font-size: 10px">计划起飞</p>
-                        <p style="font-size: 15px;"><%=fight.getETD()%>
+                        <p style="font-size: 15px;"><%=fight.hmDateFormat(fight.getETD())%>
                         </p>
                     </td>
                     <td align="center" style="vertical-align:middle;font-size:15px">
                         <p style="color: gray;font-size: 10px">计划着陆</p>
-                        <p style="font-size: 15px;"><%=fight.getETA()%>
+                        <p style="font-size: 15px;"><%=fight.hmDateFormat(fight.getETA())%>
                         </p>
                     </td>
                     <td align="center" style="vertical-align:middle;font-size:15px">
@@ -398,16 +398,16 @@
                     <%} else if (fight.getFightState() == 2) {%>
                     <td align="center" style="vertical-align:middle;font-size:15px">
                         <p style="color: gray;font-size: 10px">实际起飞</p>
-                        <p style="font-size: 15px;"><%=fight.getATD()%>
+                        <p style="font-size: 15px;"><%=fight.hmDateFormat(fight.getATD())%>
                         </p>
-                        <p style="color: gray;font-size: 10px">计划出港 <%=fight.getETD()%>
+                        <p style="color: gray;font-size: 10px">计划出港 <%=fight.hmDateFormat(fight.getETD())%>
                         </p>
                     </td>
                     <td align="center" style="vertical-align:middle;font-size:15px">
                         <p style="color: gray;font-size: 10px">预计着陆</p>
-                        <p style="font-size: 15px;"><%=fight.getETA()%>
+                        <p style="font-size: 15px;"><%=fight.hmDateFormat(fight.getETA())%>
                         </p>
-                        <p style="color: gray;font-size: 10px">计划到港 <%=fight.getETA()%>
+                        <p style="color: gray;font-size: 10px">计划到港 <%=fight.hmDateFormat(fight.getETA())%>
                         </p>
                     </td>
                     <td align="center" style="vertical-align:middle;font-size:15px">
@@ -416,16 +416,16 @@
                     <%} else {%>
                     <td align="center" style="width: 160px;vertical-align:middle;font-size:15px">
                         <p style="color: gray;font-size: 10px">预计起飞</p>
-                        <p style="font-size: 15px;"><%=fight.getETD()%>
+                        <p style="font-size: 15px;"><%=fight.hmDateFormat(fight.getETD())%>
                         </p>
-                        <p style="color: gray;font-size: 10px">计划出港 <%=fight.getETD()%>
+                        <p style="color: gray;font-size: 10px">计划出港 <%=fight.hmDateFormat(fight.getETD())%>
                         </p>
                     </td>
                     <td align="center" style="width: 160px;vertical-align:middle;font-size:15px">
                         <p style="color: gray;font-size: 10px">预计着陆</p>
-                        <p style="font-size: 15px;"><%=fight.getETA()%>
+                        <p style="font-size: 15px;"><%=fight.hmDateFormat(fight.getETA())%>
                         </p>
-                        <p style="color: gray;font-size: 10px">计划到港 <%=fight.getETA()%>
+                        <p style="color: gray;font-size: 10px">计划到港 <%=fight.hmDateFormat(fight.getETA())%>
                         </p>
                     </td>
                     <td align="center" style="vertical-align:middle;font-size:15px">

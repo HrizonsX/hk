@@ -6,6 +6,9 @@ import com.hk.service.RegisterService;
 import com.hk.util.UserCacheUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class RegisterServiceImpl implements RegisterService {
@@ -16,6 +19,7 @@ public class RegisterServiceImpl implements RegisterService {
     private UserCacheUtil userCacheUtil = null;
 
     @Override
+    @Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
     public int registerNewUser(BookPeople bookPeople) {
         int searchResult = checkBpCode(bookPeople.getBpCode());
         if(searchResult != 0){

@@ -6,6 +6,9 @@ import com.hk.service.LoginService;
 import com.hk.util.UserCacheUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class LoginServiceImpl implements LoginService {
@@ -16,6 +19,7 @@ public class LoginServiceImpl implements LoginService {
     private UserCacheUtil userCacheUtil = null;
 
     @Override
+    @Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
     public String checkLoginUser(String bpCode, String bpPassword) {
         BookPeople bookPeople = bookPeopleMapper.checkUser(bpCode, bpPassword);
         if(bookPeople != null){

@@ -5,9 +5,9 @@
 <%@ page import="com.hk.pojo.FightShipping" %><%--
   Created by IntelliJ IDEA.
   User: admin
-
   Date: 2019/7/8
   Time: 16:21
+
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -286,7 +286,8 @@
                     </div>
                     <div class="itemHeadFightSize" style="margin-top: 7px"><%=fight.getAlCode()%>
                     </div>
-                    <div class="itemHeadAirSize" style="float: left;margin-top: 11px; font-size: 18px"><%=fight.getAircraftType()%>
+                    <div class="itemHeadAirSize"
+                         style="float: left;margin-top: 11px; font-size: 18px"><%=fight.getAircraftType()%>
                     </div>
                 </div>
                 <div class="item_Size" style="border-top-style:solid;border-width: 5px;border-color: #e1f0fd">
@@ -337,7 +338,14 @@
                     <div class="site">经济舱</div>
                     <div class="price">¥ <%=fightShipping.getSsPrice()%>
                     </div>
-                    <div class="choose-fight" style="margin-left: 200px;">预定</div>
+                    <div class="choose-fight" style="margin-left: 200px;"><%if (bpCode == null) {%>
+                        <a data-toggle="modal" data-target="#signInModal"
+                           href="#"
+                           style="color: white">预定</a>
+                        <%} else {%>
+                        <a style="color: white"
+                           href="/hk_war_exploded/book.jsp?alCode=<%=fight.getAlCode()%>&fightDate=<%=fight.getFightDate()%>&ssCode=<%=fightShipping.getSsCode()%>&dcityName=<%=fight.getDcityName()%>&tcityName=<%=fight.getTcityName()%>&ETD=<%=fight.ymdhmDateFormat(fight.getETD())%>&ETA=<%=fight.ymdhmDateFormat(fight.getETA())%>&ssPrice=<%=fightShipping.getSsPrice()%>">预定</a>
+                        <%}%></div>
                     <div class="remark">
                         <%if (fightShipping.getEcsqNumber() == 0) {%>
                         售空
@@ -349,7 +357,14 @@
                     <div class="site">商务舱</div>
                     <div class="price">¥ <%=fightShipping.getSsPrice()%>
                     </div>
-                    <div class="choose-fight" style="margin-left: 200px;">预定</div>
+                    <div class="choose-fight" style="margin-left: 200px;"><%if (bpCode == null) {%>
+                        <a data-toggle="modal" data-target="#signInModal"
+                           href="#"
+                           style="color: white">预定</a>
+                        <%} else {%>
+                        <a style="color: white"
+                           href="/hk_war_exploded/book.jsp?alCode=<%=fight.getAlCode()%>&fightDate=<%=fight.getFightDate()%>&ssCode=<%=fightShipping.getSsCode()%>&dcityName=<%=fight.getDcityName()%>&tcityName=<%=fight.getTcityName()%>&ETD=<%=fight.ymdhmDateFormat(fight.getETD())%>&ETA=<%=fight.ymdhmDateFormat(fight.getETA())%>&ssPrice=<%=fightShipping.getSsPrice()%>">预定</a>
+                        <%}%></div>
                     <div class="remark">
                         <%if (fightShipping.getBcsqNumber() == 0) {%>
                         售空
@@ -361,7 +376,14 @@
                     <div class="site">头等舱</div>
                     <div class="price">¥ <%=fightShipping.getSsPrice()%>
                     </div>
-                    <div class="choose-fight" style="margin-left: 200px;">预定</div>
+                    <div class="choose-fight" style="margin-left: 200px;"><%if (bpCode == null) {%>
+                        <a data-toggle="modal" data-target="#signInModal"
+                           href="#"
+                           style="color: white">预定</a>
+                        <%} else {%>
+                        <a style="color: white"
+                           href="/hk_war_exploded/book.jsp?alCode=<%=fight.getAlCode()%>&fightDate=<%=fight.getFightDate()%>&ssCode=<%=fightShipping.getSsCode()%>&dcityName=<%=fight.getDcityName()%>&tcityName=<%=fight.getTcityName()%>&ETD=<%=fight.ymdhmDateFormat(fight.getETD())%>&ETA=<%=fight.ymdhmDateFormat(fight.getETA())%>&ssPrice=<%=fightShipping.getSsPrice()%>">预定</a>
+                        <%}%></div>
                     <div class="remark">
                         <%if (fightShipping.getFcsqNumber() == 0) {%>
                         售空

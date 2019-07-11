@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/admin")
 //管理系统不需要考虑高并发
@@ -39,6 +41,16 @@ public class AdminController {
         return mv;
     }
 
+    //返回fight
+    @RequestMapping(value = "/getFights", method = {RequestMethod.GET, RequestMethod.POST})
+    public ModelAndView getFights(){
+        ModelAndView mv = new ModelAndView();
+        List<Fight> fightList = fightMapper.getAllFights();
+        mv.addObject("fights",fightList);
+        mv.setViewName("admin/admin");
+        return mv;
+    }
+
     //添加航班
     @RequestMapping(value = "/addFight", method = {RequestMethod.GET, RequestMethod.POST})
     public ModelAndView addFight(Fight fight){
@@ -53,8 +65,11 @@ public class AdminController {
     @RequestMapping(value = "/modifyFight", method = {RequestMethod.GET, RequestMethod.POST})
     public ModelAndView modifyFight(Fight fight){
         ModelAndView mv = new ModelAndView();
+        System.out.println(fight);
         fightMapper.updateFight(fight);
-        mv.setViewName("");
+        List<Fight> fightList = fightMapper.getAllFights();
+        mv.addObject("fights",fightList);
+        mv.setViewName("admin/admin");
         return mv;
     }
 

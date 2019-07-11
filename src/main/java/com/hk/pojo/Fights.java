@@ -157,6 +157,9 @@ public class Fights implements Serializable {
     public String ymdDateFormat(Timestamp t){
         return new SimpleDateFormat("yyyy-MM-dd").format(t);
     }
+    public String ymdhmDateFormat(Timestamp t){
+        return new SimpleDateFormat("yyyy-MM-dd HH:mm").format(t);
+    }
 
     @Override
     public String toString() {

@@ -32,7 +32,7 @@ public class PassengerTicketController {
 
     //不好的list传参
     @RequestMapping(value = "/bookTicket", method = {RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView bookTicket(BookParams bookParams, PassengerModel passengerModel){
+    public ModelAndView bookTicket(BookParams bookParams, PassengerModel passengerModel) {
         ModelAndView mv = new ModelAndView();
         Book newBook = bookTicketService.createNewBook(bookParams, passengerModel);
         mv.addObject("newBook", newBook);
@@ -44,7 +44,7 @@ public class PassengerTicketController {
 
     @RequestMapping(value = "/searchTicket", method = {RequestMethod.GET, RequestMethod.POST})
     //根据时间、出发地和目的地组合查询所有航班
-    public ModelAndView searchTicket(SearchParams searchParams){
+    public ModelAndView searchTicket(SearchParams searchParams) {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         Date d = null;
         try {
@@ -66,7 +66,7 @@ public class PassengerTicketController {
 
     @RequestMapping(value = "/searchDynamic", method = {RequestMethod.GET, RequestMethod.POST})
     //根据时间、出发地和目的地组合查询所有航班
-    public ModelAndView searchDynamic(SearchParams searchParams){
+    public ModelAndView searchDynamic(SearchParams searchParams) {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         Date d = null;
         try {
@@ -85,27 +85,30 @@ public class PassengerTicketController {
     }
 
     //json传参，订票
-    @RequestMapping(value = "/bookTicket2", method ={RequestMethod.POST})
-        public ModelAndView submitUserList_4(@RequestBody BookParams bookParams) {
+    @RequestMapping(value = "/bookTicket2", method = {RequestMethod.POST})
+    @ResponseBody
+    public String submitUserList_4(@RequestBody BookParams bookParams, HttpSession httpSession) {
         ModelAndView mv = new ModelAndView();
-//        System.out.println(bookParams);
+        System.out.println(bookParams);
         PassengerModel passengerModel = new PassengerModel(bookParams.getPassengerParams());
-//        System.out.println(passengerModel.getPassengers().get(0));
+        System.out.println(passengerModel.getPassengers().get(0));
         Book newBook = bookTicketService.createNewBook(bookParams, passengerModel);
         List<Insurance> insurancesList = bookTicketService.getInsurancesInfo();
         mv.addObject("newBook", newBook);
         mv.addObject("insurancesList", insurancesList);
-//        System.out.println(newBook);
-//        System.out.println(newBook.getBookBills().get(0));
-//        System.out.println(newBook.getBookBills().get(0).getPassenger());
+        System.out.println(newBook);
+        System.out.println(newBook.getBookBills().get(0));
+        System.out.println(newBook.getBookBills().get(0).getPassenger());
+        httpSession.setAttribute("newBook", newBook);
+        httpSession.setAttribute("insurancesList", insurancesList);
         //TODO: 跳转到增值服务页面
-        mv.setViewName("");
-        return mv;
+        mv.setViewName("Insurance2");
+        return "fuckyou";
     }
 
     //第二种查询的方式，根据飞行时间和航班编号查询
     @RequestMapping(value = "/searchTicket2", method = {RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView searchAlInfo(String fightDate, String alCode){
+    public ModelAndView searchAlInfo(String fightDate, String alCode) {
         ModelAndView mv = new ModelAndView();
         java.sql.Date fightTime = java.sql.Date.valueOf(fightDate);
         List<Fights> fights = searchTicketService.getFightsByDateAndAlCode(fightTime, alCode);
@@ -119,7 +122,7 @@ public class PassengerTicketController {
 
     //注册新用户
     @RequestMapping(value = "/registerUser", method = {RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView registerUser(BookPeople bookPeople){
+    public ModelAndView registerUser(BookPeople bookPeople) {
         ModelAndView mv = new ModelAndView();
         registerService.registerNewUser(bookPeople);
         mv.setViewName("back");
@@ -128,15 +131,14 @@ public class PassengerTicketController {
 
     //登陆验证
     @RequestMapping(value = "loginUser", method = {RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView loginUser(String bpCode, String bpPassword, HttpSession httpSession){
+    public ModelAndView loginUser(String bpCode, String bpPassword, HttpSession httpSession) {
         ModelAndView mv = new ModelAndView();
         String checkResult = loginService.checkLoginUser(bpCode, bpPassword);
-        if(checkResult != null){
+        if (checkResult != null) {
             //登陆成功，跳转到首页面
             httpSession.setAttribute("bpCode", checkResult);
             mv.setViewName("back");
-        }
-        else{
+        } else {
             //登陆失败跳转别的页面
             mv.setViewName("back");
         }
@@ -146,13 +148,12 @@ public class PassengerTicketController {
     //注册界面验证用户名是否重复
     @RequestMapping(value = "/registerUser1", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String registerUser1(@RequestBody String bpCode){
+    public String registerUser1(@RequestBody String bpCode) {
         bpCode = bpCode.replace("\"", "");
         int searchResult = registerService.checkBpCode(bpCode);
-        if(searchResult != 0){
+        if (searchResult != 0) {
             return "no";
-        }
-        else{
+        } else {
             return "yes";
         }
     }
@@ -160,23 +161,21 @@ public class PassengerTicketController {
     //买保险服务，提交保险订单
     @RequestMapping(value = "/buyInsurance", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String buyInsurance(@RequestBody InsuranceParams insuranceParams){
+    public String buyInsurance(@RequestBody InsuranceParams insuranceParams) {
 //        System.out.println(insuranceParams.getInsuranceOrders().get(0));
 //        System.out.println(insuranceParams.getInsuranceOrders().get(1));
 //        int result =
         bookTicketService.buyTicketInsurance(insuranceParams.getInsuranceOrders());
         //TODO:可以删掉list
         List<Insurance> list = bookTicketService.getInsurancesInfo();
-        System.out.println(list.get(0));
-        System.out.println(list.get(1));
 //        System.out.println(list.get(2));
-        return "./search.jsp";
+        return "./main.jsp";
     }
 
     //返回城市列表的json格式
     @RequestMapping(value = "/getCities", method = {RequestMethod.GET, RequestMethod.POST}, produces = "text/json;charset=UTF-8")
     @ResponseBody
-    public String getCities(){
+    public String getCities() {
         List<City> citiesList = searchTicketService.getAllCities();
 //        System.out.println(citiesList.get(0));
 //        System.out.println(citiesList.size());
@@ -187,7 +186,7 @@ public class PassengerTicketController {
 
     //返回用户订单列表的json
     @RequestMapping(value = "/getBooks", method = {RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView getBooks(String bpCode){
+    public ModelAndView getBooks(String bpCode) {
         ModelAndView mv = new ModelAndView();
 //        System.out.println(fights);
         List<Book> books = bookTicketService.getBooksByBpCode(bpCode);
