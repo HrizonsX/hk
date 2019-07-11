@@ -2,6 +2,7 @@ package com.hk.pojo;
 
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class Book {
@@ -106,14 +107,6 @@ public class Book {
         this.ssCode = ssCode;
     }
 
-//    public String getCouponCode() {
-//        return couponCode;
-//    }
-//
-//    public void setCouponCode(String couponCode) {
-//        this.couponCode = couponCode;
-//    }
-
     public String getBpCode() {
         return bpCode;
     }
@@ -144,6 +137,14 @@ public class Book {
 
     public void setBookState(int bookState) {
         this.bookState = bookState;
+    }
+
+    public String ymdhmDateFormat(Timestamp t){
+        return new SimpleDateFormat("yyyy-MM-dd HH:mm").format(t);
+    }
+
+    public String ymdhmsDateFormat(Timestamp t){
+        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(t);
     }
 
     @Override

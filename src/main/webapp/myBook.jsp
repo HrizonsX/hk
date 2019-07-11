@@ -266,7 +266,7 @@
                     <th style="width: 50px;text-align:center;font-size:15px">订票总价</th>
                     <th style="width: 50px;text-align:center;font-size:15px">订票状态</th>
                     <th style="width: 50px;text-align:center;font-size:15px">订票时间</th>
-                    <th style="text-align:center;font-size:15px">详情</th>
+                    <th style="width: 50px;text-align:center;font-size:15px">详情</th>
                 </tr>
                 </thead>
                 <%
@@ -277,7 +277,7 @@
                 <tr>
                     <td align="center" style="vertical-align: middle;font-size: 15px;"><%=book.getBookCode()%></td>
                     <td align="center" style="vertical-align: middle;font-size: 15px;"><%=book.getAlCode()%></td>
-                    <td align="center" style="vertical-align: middle;font-size: 15px"><%=book.getFightDate()%></td>
+                    <td align="center" style="vertical-align: middle;font-size: 15px"><%=book.ymdhmDateFormat(book.getFightDate())%></td>
                     <td align="center" style="vertical-align: middle;font-size: 15px">
                         <%if(book.getShippingSpace().getSsName().compareTo("ec") == 0){%>
                         经济舱
@@ -296,7 +296,7 @@
                         已支付
                         <%}%>
                     </td>
-                    <td align="center" style="vertical-align: middle;font-size: 15px"><%=book.getBookDate()%></td>
+                    <td align="center" style="vertical-align: middle;font-size: 15px"><%=book.ymdhmsDateFormat(book.getBookDate())%></td>
                     <td align="center" style="vertical-align: middle;font-size: 15px">
                         <a data-toggle="modal" data-target="#getLay<%=i%>" href="#">详情</a>
                         <div class="modal fade" id="getLay<%=i%>" tabindex="-1" role="dialog" aria-labelledby="getLay<%=i%>Label" aria-hidden="true" data-backdrop="false">
