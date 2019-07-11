@@ -95,7 +95,11 @@ public class BookTicketServiceImpl implements BookTicketService {
                 bookBill.setBbState(0);
             }
             bookBillMapper.addBookBill(bookBill);
-
+            bookBill.setPassenger(newPassenger);
+            if(newBook.getBookBills() == null){
+                newBook.setBookBills(new ArrayList<BookBill>());
+            }
+            newBook.getBookBills().add(bookBill);
         }
         //回写修改的航班到redis里
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
@@ -132,10 +136,10 @@ public class BookTicketServiceImpl implements BookTicketService {
     @Override
     public List<Book> getBooksByBpCode(String bpCode) {
         List<Book> list = bookMapper.getBooksByBpCode(bpCode);
-        System.out.println(list.get(0));
-        System.out.println(list.get(0).getShippingSpace());
-        System.out.println(list.get(0).getBookBills().get(0));
-        System.out.println(list.get(0).getBookBills().get(0).getPassenger());
+//        System.out.println(list.get(0));
+//        System.out.println(list.get(0).getShippingSpace());
+//        System.out.println(list.get(0).getBookBills().get(0));
+//        System.out.println(list.get(0).getBookBills().get(0).getPassenger());
         return list;
     }
 }

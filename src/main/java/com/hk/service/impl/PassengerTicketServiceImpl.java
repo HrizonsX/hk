@@ -28,7 +28,9 @@ public class PassengerTicketServiceImpl implements PassengerTicketService {
     @Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
     public int grapTicketForVersion(String alCode, Timestamp fightDate, String target) {
 
+        System.out.println(target);
         Fight fight = fightMapper.getFight(alCode, fightDate);
+        System.out.println(fight);
         int update = 0;
         if("bc".compareTo(target) == 0 && fight.getBcspNumber() > 0){
             update = fightMapper.decreaseBcsqNumber(alCode, fightDate, fight.getBcVersion());

@@ -145,4 +145,24 @@ public class Fight implements Serializable {
     public void setATA(Timestamp ATA) {
         this.ATA = ATA;
     }
+
+    @Override
+    public String toString() {
+        return "Fight{" +
+                "alCode='" + alCode + '\'' +
+                ", fightDate=" + fightDate +
+                ", aircraftCode='" + aircraftCode + '\'' +
+                ", bcspNumber=" + bcspNumber +
+                ", ecsqNumber=" + ecsqNumber +
+                ", fcsqNumber=" + fcsqNumber +
+                ", fightState=" + fightState +
+                ", ATD=" + ATD +
+                ", ATA=" + ATA +
+                ", ETD=" + ETD +
+                ", ETA=" + ETA +
+                ", bcVersion=" + bcVersion +
+                ", fcVersion=" + fcVersion +
+                ", ecVersion=" + ecVersion +
+                '}';
+    }
 }

@@ -88,12 +88,17 @@ public class PassengerTicketController {
     @RequestMapping(value = "/bookTicket2", method ={RequestMethod.POST})
         public ModelAndView submitUserList_4(@RequestBody BookParams bookParams) {
         ModelAndView mv = new ModelAndView();
-        System.out.println(bookParams);
+//        System.out.println(bookParams);
         PassengerModel passengerModel = new PassengerModel(bookParams.getPassengerParams());
-        System.out.println(passengerModel.getPassengers().get(0));
+//        System.out.println(passengerModel.getPassengers().get(0));
         Book newBook = bookTicketService.createNewBook(bookParams, passengerModel);
+        List<Insurance> insurancesList = bookTicketService.getInsurancesInfo();
         mv.addObject("newBook", newBook);
-        //TODO: 在这里添加响应的页面
+        mv.addObject("insurancesList", insurancesList);
+//        System.out.println(newBook);
+//        System.out.println(newBook.getBookBills().get(0));
+//        System.out.println(newBook.getBookBills().get(0).getPassenger());
+        //TODO: 跳转到增值服务页面
         mv.setViewName("");
         return mv;
     }
@@ -160,6 +165,7 @@ public class PassengerTicketController {
 //        System.out.println(insuranceParams.getInsuranceOrders().get(1));
 //        int result =
         bookTicketService.buyTicketInsurance(insuranceParams.getInsuranceOrders());
+        //TODO:可以删掉list
         List<Insurance> list = bookTicketService.getInsurancesInfo();
         System.out.println(list.get(0));
         System.out.println(list.get(1));
