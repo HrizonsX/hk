@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.mapper.AircraftMapper">
+    <resultMap id="aircraftMap" type="com.hk.pojo.Aircraft">
+        <id column="aircraft_code" property="aircraftCode"/>
+        <result column="aircraft_type" property="aircraftType"/>
+        <result column="buy_time" property="buyTime"/>
+        <result column="service_time" property="serviceTime"/>
+        <result column="aircraft_state" property="aircraftState"/>
+    </resultMap>
+    <select id="getAllAircrafts" resultMap="aircraftMap">
+        select * from Aircraft
+    </select>
+</mapper>

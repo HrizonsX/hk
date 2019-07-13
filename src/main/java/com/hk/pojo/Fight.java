@@ -3,6 +3,7 @@ package com.hk.pojo;
 import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 
 public class Fight implements Serializable {
 
@@ -144,6 +145,13 @@ public class Fight implements Serializable {
 
     public void setATA(Timestamp ATA) {
         this.ATA = ATA;
+    }
+
+    public String ymdhmsDateFormat(Timestamp t){
+        if(t == null){
+            return null;
+        }
+        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(t);
     }
 
     @Override

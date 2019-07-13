@@ -25,5 +25,6 @@
         <mapper resource="com/hk/mapper/AirLineMapper.xml"/>
         <mapper resource="com/hk/mapper/AirportMapper.xml"/>
         <mapper resource="com/hk/mapper/CityMapper.xml"/>
+        <mapper resource="com/hk/mapper/AircraftMapper.xml"/>
     </mappers>
 </configuration>

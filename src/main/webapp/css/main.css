@@ -273,8 +273,12 @@
     color: #fff !important;
     opacity: 1;
 }
-#remind{
+#remind {
     margin-right: 235px;
     font-size: 10px;
     /*left:5px;*/
+}
+#remin {
+    margin-right: 345px;
+    font-size: 10px;
 }

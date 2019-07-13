@@ -54,4 +54,15 @@ public class AirLine {
     public void setAlState(int alState) {
         this.alState = alState;
     }
+
+    @Override
+    public String toString() {
+        return "AirLine{" +
+                "alCode='" + alCode + '\'' +
+                ", alName='" + alName + '\'' +
+                ", daNumber='" + daNumber + '\'' +
+                ", taNumber='" + taNumber + '\'' +
+                ", alState=" + alState +
+                '}';
+    }
 }

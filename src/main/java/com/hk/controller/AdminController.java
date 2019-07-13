@@ -1,11 +1,11 @@
 package com.hk.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.hk.mapper.AirLineMapper;
+import com.hk.mapper.AircraftMapper;
 import com.hk.mapper.FightMapper;
 import com.hk.mapper.ShippingSpaceMapper;
-import com.hk.pojo.AirLine;
-import com.hk.pojo.Fight;
-import com.hk.pojo.ShippingSpace;
+import com.hk.pojo.*;
 import com.hk.service.SearchTicketService;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.ListResourceBundle;
 
 @Controller
 @RequestMapping("/admin")
@@ -31,10 +32,12 @@ public class AdminController {
     private ShippingSpaceMapper shippingSpaceMapper = null;
     @Autowired
     private SearchTicketService searchTicketService = null;
+    @Autowired
+    private AircraftMapper aircraftMapper = null;
 
     //添加航线
     @RequestMapping(value = "/addAirLine", method = {RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView addAirLine(AirLine airLine){
+    public ModelAndView addAirLine(AirLine airLine) {
         ModelAndView mv = new ModelAndView();
         airLineMapper.addAirLine(airLine);
         mv.setViewName("");
@@ -43,53 +46,65 @@ public class AdminController {
 
     //返回fight
     @RequestMapping(value = "/getFights", method = {RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView getFights(){
+    public ModelAndView getFights() {
         ModelAndView mv = new ModelAndView();
         List<Fight> fightList = fightMapper.getAllFights();
-        mv.addObject("fights",fightList);
+        List<Aircraft> aircrafts = aircraftMapper.getAllAircrafts();
+        List<AirLine> airLines = airLineMapper.getAllAirLine();
+        mv.addObject("fights", fightList);
+        mv.addObject("aircrafts", aircrafts);
+        mv.addObject("airLines", airLines);
         mv.setViewName("admin/admin");
         return mv;
     }
 
     //添加航班
     @RequestMapping(value = "/addFight", method = {RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView addFight(Fight fight){
+    public ModelAndView addFight(Fight fight) {
         ModelAndView mv = new ModelAndView();
+//        System.out.println(fight);
         fightMapper.addFight(fight);
-        mv.setViewName("");
+        List<Fight> fightList = fightMapper.getAllFights();
+        List<Aircraft> aircrafts = aircraftMapper.getAllAircrafts();
+        List<AirLine> airLines = airLineMapper.getAllAirLine();
+        mv.addObject("fights", fightList);
+        mv.addObject("aircrafts", aircrafts);
+        mv.addObject("airLines", airLines);
+        mv.setViewName("admin/admin");
         return mv;
     }
 
 
     //修改航班
     @RequestMapping(value = "/modifyFight", method = {RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView modifyFight(Fight fight){
+    public ModelAndView modifyFight(Fight fight) {
         ModelAndView mv = new ModelAndView();
-        System.out.println(fight);
+//        System.out.println(fight);
         fightMapper.updateFight(fight);
         List<Fight> fightList = fightMapper.getAllFights();
-        mv.addObject("fights",fightList);
+        mv.addObject("fights", fightList);
         mv.setViewName("admin/admin");
         return mv;
     }
 
-    //ajax查看alCode是否重复
+    //ajax查看alCode和fightDate是否重复
     @RequestMapping(value = "/checkAlCode", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String checkAlCode(@RequestBody String alCode){
-        alCode = alCode.replace("\"", "");
-        int searchResult = searchTicketService.checkAlCode(alCode);
-        if(searchResult != 0){
+    public String checkAlCode(@RequestBody String fightParams) {
+        JSONObject jsonObject= JSONObject.parseObject(fightParams);
+        FightParams fightParam = JSONObject.toJavaObject(jsonObject, FightParams.class);
+//        System.out.println(fightParams);
+        Fight fight = fightMapper.getFight(fightParam.getAlCode(), fightParam.getFightDate());
+        if (fight != null) {
             return "no";
-        }
-        else{
+        } else {
             return "yes";
         }
     }
 
-    //添加餐位
+    //添加舱位
     @RequestMapping(value = "/addShippingSpace", method = {RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView addShippingSpace(ShippingSpace shippingSpace){
+    public ModelAndView addShippingSpace(ShippingSpace shippingSpace) {
         ModelAndView mv = new ModelAndView();
         shippingSpaceMapper.addShippingSpace(shippingSpace);
         mv.setViewName("");
@@ -97,9 +112,9 @@ public class AdminController {
     }
 
 
-    //修改航班
+    //修改舱位
     @RequestMapping(value = "/modifyShippingSpace", method = {RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView modifyShippingSpace(ShippingSpace shippingSpace){
+    public ModelAndView modifyShippingSpace(ShippingSpace shippingSpace) {
         ModelAndView mv = new ModelAndView();
         shippingSpaceMapper.updateShippingSpace(shippingSpace);
         mv.setViewName("");
