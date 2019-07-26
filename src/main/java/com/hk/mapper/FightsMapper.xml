@@ -36,7 +36,7 @@
     </resultMap>
     <select id="getFightsByDateAndDT" resultMap="fightsMap">
         select al_code, fight_date, dcity_name, tcity_name, dairport_name, tairport_name, ATD, ATA, ETD, ETA, aircraft_type, fight_state, al_name from
-        fights where DATE_FORMAT(fight_date,'%Y-%m-%d')=#{fightDate} and dcity_name=#{dcityName} and tcity_name=#{tcityName}
+        fights where DATE_FORMAT(fight_date,'%Y-%m-%d')=#{fightDate} and dcity_name=#{dcityName} and tcity_name=#{tcityName} order by fight_date
     </select>
 
     <select id="getSingleFights" resultMap="fightsMap">

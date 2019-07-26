@@ -15,16 +15,16 @@
     <script language="JavaScript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
     <script language="JavaScript" src="https://cdn.bootcss.com/jquery-json/2.6.0/jquery.json.min.js"></script>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="laydate/laydate.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/laydate/laydate.js" type="text/javascript"></script>
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="form.js" type="text/javascript"></script>
     <title>厦门航空</title>
-    <link href="css/main.css" type="text/css" rel="stylesheet"/>
-    <script type="text/javascript" src="js/citySet.js"></script>
-    <link href="css/button.css" type="text/css" rel="stylesheet"/>
-    <link type="text/css" rel="stylesheet" href="css/style.css">
-    <script src="js/img_ver.js"></script>
+    <link href="${pageContext.request.contextPath}/css/main.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/citySet.js"></script>
+    <link href="${pageContext.request.contextPath}/css/button.css" type="text/css" rel="stylesheet"/>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+    <script src="${pageContext.request.contextPath}/js/img_ver.js"></script>
     <script type="text/javascript" language="JavaScript">
         function ajaxValidate() {
             var bpCode = $("#UbpCode").val();

@@ -60,7 +60,7 @@ public class PassengerTicketController {
         String jsonFights = JSON.toJSON(fights).toString();
 //        System.out.println(jsonFights);
         mv.addObject("jsonFights", jsonFights);
-        mv.setViewName("list");
+        mv.setViewName("hk");
         return mv;
     }
 

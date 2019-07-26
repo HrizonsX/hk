@@ -14,7 +14,7 @@
 <form action="./passengerTicket/searchTicket.do" method="post">
     <input type="text" name="dcityName"/>出发
     <input type="text" name="tcityName"/>目的地
-    <input type="date" name="fightDate" value="2019-01-02"/>
+    <input type="date" name="fightDate" value="2019-07-11"/>
     <input type="submit" value="提交"/>
 </form>
 </body>

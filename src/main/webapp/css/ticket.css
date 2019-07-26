@@ -1,0 +1,1020 @@
+body {
+    background-color: rgb(237, 242, 246);
+    padding: 0px;
+    margin: 0px;
+}
+
+.d1 {
+    width: 770px;
+    /* height: 310px; */
+    /* margin: 0 auto; */
+    float: left;
+    margin-top: 1px;
+    /* padding-bottom: 1px; */
+    background-color: white;
+    /* box-shadow: 2px 1px 30px 3px #808080; */
+}
+
+/* 			.d1:hover{
+				box-shadow: 10px 10px 25px 3px #808080;
+				transform: translateY(-9px);
+			} */
+
+.d2 {
+    width: 740px;
+    height: 37px;
+    padding: 15px;
+    padding-bottom: 0px;
+    background-color: rgb(193, 214, 232);
+}
+
+.i {
+    width: 28px;
+    height: 14px;
+    margin-right: 3px;
+}
+
+.s1 {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    margin-right: 35px;
+}
+
+.s2 {
+    width: 66px;
+    height: 20px;
+    line-height: 20px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+    font-size: 11px;
+    color: white;
+    background-color: rgb(150, 183, 213);
+    display: inline-block;
+    text-align: center;
+    border-radius: 100px;
+    position: absolute;
+    margin-right: 7px;
+}
+
+.s3 {
+    display: inline-block;
+    height: 20px;
+    width: 29px;
+    border-radius: 100px;
+    background-color: rgb(150, 183, 213);
+    margin-left: 77px;
+    position: absolute;
+    /* text-align: center; */
+}
+
+.s4 {
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+    font-size: 11px;
+    color: white;
+    background-color: rgb(150, 183, 213);
+    display: inline-block;
+    text-align: center;
+    border-radius: 100px;
+    position: absolute;
+    margin-left: 117px;
+
+}
+
+.i2 {
+    width: 15px;
+    height: 11px;
+    margin-left: 7px;
+    margin-top: 4px;
+}
+
+.d5 {
+    width: 513px;
+    height: 34px;
+    float: right;
+    background-image: url(../img/fly.png);
+    background-size: 100% 100%;
+}
+
+.d3 {
+    width: 730px;
+    height: 61px;
+    background-color: rgb(227, 240, 252);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.d61 {
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/takeoff.png);
+    background-size: 100% 100%;
+    position: absolute;
+    margin-top: 10px;
+    /* margin-left: 0px; */
+}
+
+.d6 {
+    width: 106px;
+    height: 59px;
+    margin-right: 5px;
+    float: left;
+    /* padding-left: 30px; */
+}
+
+.d62 {
+    font-size: 32px;
+}
+
+.d63 {
+    font-size: 11px;
+}
+
+.d64 {
+    width: 79px;
+    height: 60px;
+    float: right;
+    text-align: center;
+    margin-right: 8px;
+}
+
+.d7 {
+    width: 147px;
+    height: 4px;
+    float: left;
+    margin-top: 16px;
+    background-image: url(../img/dot.png);
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.sp1 {
+    font-size: 10px;
+    color: rgb(150, 183, 213);
+}
+
+.d8 {
+    width: 106px;
+    height: 59px;
+    float: left;
+    margin-left: 15px;
+}
+
+.d81 {
+    height: 17px;
+    width: 17px;
+    background-image: url(../img/landing.png);
+    background-size: 100% 100%;
+    position: absolute;
+    margin-top: 10px;
+}
+
+.d9 {
+    float: left;
+    font-size: 12px;
+    margin-left: 90px;
+    margin-top: 12px;
+}
+
+.dp {
+    float: right;
+}
+
+.dp4 {
+    width: 730px;
+    height: 28px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(235, 236, 235);
+    font-size: 12px;
+    line-height: 28px;
+}
+
+.dp41 {
+    width: 140px;
+    height: 22px;
+    margin-right: 5px;
+    float: left;
+}
+
+.dp42 {
+    width: 100px;
+    height: 27px;
+    float: left;
+    color: rgb(195, 196, 195);
+}
+
+.dp43 {
+    width: 145px;
+    float: left;
+    height: 27px;
+    margin-left: 20px;
+    text-align: right;
+}
+
+.dp44 {
+    height: 28px;
+    width: 102px;
+    float: left;
+    margin-left: 25px;
+}
+
+.dp45 {
+    width: 80px;
+    height: 26px;
+    float: left;
+    margin-left: 45px;
+    background-color: rgb(121, 186, 246);
+    border-radius: 100px;
+    text-align: center;
+    line-height: 26px;
+    color: rgb(233, 244, 254);
+}
+
+.dp46 {
+    width: 60px;
+    height: 27px;
+    float: left;
+    margin-left: 7px;
+    color: rgb(242, 154, 87);
+}
+
+.dpp {
+    font-size: 12px;
+    color: gray;
+    width: 103px;
+    /* text-align: center; */
+    margin-left: 350px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dpb {
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+
+.dh1 {
+    width: 750px;
+    height: 40px;
+    /* margin: 0 auto; */
+    float: left;
+    background-color: rgb(62, 114, 183);
+    line-height: 40px;
+    font-size: 14px;
+    padding-left: 20px;
+    color: white;
+    z-index: 9999;
+    /* box-shadow: 2px -2px 20px 2px #808080; */
+    margin-top: 15px;
+}
+
+.m {
+    color: rgb(170, 170, 170);
+}
+
+.dhs1 {
+    margin-right: 15px;
+}
+
+.q {
+    width: 12px;
+    height: 12px;
+    float: right;
+    margin-top: 8px;
+    background-image: url(../img/question.png);
+    background-size: 100% 100%;
+}
+
+.q:hover > .alert {
+    visibility: visible;
+}
+
+.alert {
+    width: 425px;
+    visibility: hidden;
+    position: absolute;
+    padding: 12px;
+    margin-top: 13px;
+    background-color: rgba(57, 80, 115, 0.9);
+    z-index: 9999;
+}
+
+.t1 {
+    font-size: 11px;
+    border-collapse: collapse;
+}
+
+.td1 {
+    border: 1px solid white;
+}
+
+.t2 {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+.tb2 {
+    border-bottom: 1px solid white;
+}
+
+.tbc {
+    text-align: center;
+}
+
+.d4 {
+    background-color: white;
+}
+
+.hid {
+    display: none;
+}
+
+.dpp:hover {
+    color: black;
+}
+
+.icon2 {
+    width: 17px;
+    height: 17px;
+    float: right;
+    background-image: url(../img/caret-down.png);
+    background-size: 100% 100%;
+}
+
+.dbt {
+    font-size: 12px;
+    color: gray;
+    /* text-align: center; */
+    margin-left: 350px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.icon3 {
+    width: 17px;
+    height: 17px;
+    float: right;
+    background-image: url(../img/caret-up.png);
+    background-size: 100% 100%;
+}
+
+.dp1 {
+    float: right;
+    margin-top: 12px;
+    margin-right: 45px;
+    font-size: 12px;
+    width: 64px;
+}
+
+.alert2 {
+    width: 250px;
+    visibility: hidden;
+    position: absolute;
+    padding: 8px;
+    margin-top: 13px;
+    font-size: 11px;
+    color: white;
+    /* margin-right: 100px; */
+    background-color: rgba(57, 80, 115, 0.9);
+}
+
+.q:hover > .alert2 {
+    visibility: visible;
+}
+
+.head {
+    height: 62px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    line-height: 62px;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 99999;
+    box-shadow: 1px 0px 10px 1px #808080;
+}
+
+.logo {
+    background-image: url(../img/logo1.png);
+    background-size: 100% 100%;
+    width: 400px;
+    height: 54px;
+    margin-top: 3px;
+    margin-left: 13%;
+    float: left;
+}
+
+.nation {
+    background-image: url(../img/zhongguo.png);
+    background-size: 100% 100%;
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 7%;
+    transition: all 0.4s;
+}
+
+.nation:hover {
+    transform: rotate(90deg);
+}
+
+.login {
+    text-decoration: none;
+    float: left;
+    font-size: 12px;
+    height: 50px;
+    color: rgb(90, 90, 90);
+    margin-left: 3px;
+}
+
+.register {
+    text-decoration: none;
+    float: left;
+    font-size: 12px;
+    color: rgb(90, 90, 90);
+}
+
+.block {
+    height: 30px;
+}
+
+.sep {
+    width: 1px;
+    height: 15px;
+    float: left;
+    border-left: 1px solid rgb(90, 90, 90);
+    margin-top: 24px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.line {
+    margin-left: 5%;
+    width: 410px;
+    height: 40px;
+    float: left;
+}
+
+.lineItem {
+    float: left;
+    margin-right: 50px;
+    font-size: 13px;
+    color: rgb(90, 90, 90);
+    cursor: default;
+    height: 59px;
+}
+
+.lineItem:hover {
+    color: rgb(47, 103, 186);
+    border-bottom: 4px solid rgb(59, 107, 201);
+}
+
+.userView {
+    width: 100%;
+    height: 180px;
+    padding: 25px;
+    position: fixed;
+    visibility: hidden;
+    background-color: white;
+    z-index: 99999;
+    left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /* top: 70px: */
+}
+
+.box {
+    width: 1000px;
+    height: 170px;
+    margin: 0 auto;
+    /* background-color: green; */
+}
+
+.target:hover > .userView {
+    visibility: visible;
+    box-shadow: 0 0 3px #808080;
+    /* border-top: 1 solid black; */
+}
+
+
+.dm {
+    width: 770px;
+    height: 50px;
+    background-color: white;
+    /* margin: 0 auto;*/
+    float: left;
+}
+
+.ps {
+    height: 50px;
+    width: 104px;
+    float: right;
+    font-size: 12px;
+    line-height: 50px;
+    color: rgb(202, 202, 202);
+    text-align: center;
+    background-color: white;
+    padding-left: 15px;
+    cursor: pointer;
+    padding-right: 15px;
+}
+
+.psi {
+    background-image: url(../img/qian-2.png);
+    background-size: 100% 100%;
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-top: 16px;
+}
+
+.ps:hover > .psi {
+    background-image: url(../img/qian.png);
+}
+
+.ps:hover {
+    color: rgb(65, 149, 213);
+}
+
+.ts {
+    height: 50px;
+    width: 120px;
+    float: right;
+    font-size: 12px;
+    line-height: 50px;
+    color: rgb(202, 202, 202);
+    text-align: center;
+    background-color: white;
+    padding-left: 15px;
+    cursor: pointer;
+    padding-right: 15px;
+}
+
+.tsi {
+    background-image: url(../img/shijian.png);
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 15px;
+    margin-right: 2px;
+}
+
+.ts:hover {
+    color: rgb(65, 149, 213);
+}
+
+.ts:hover > .tsi {
+    background-image: url(../img/shijian-2.png);
+}
+
+.ms {
+    width: 98px;
+    height: 25px;
+    border-radius: 100px;
+    font-size: 11px;
+    float: right;
+    line-height: 25px;
+    text-align: center;
+    margin: 12px;
+    color: rgb(202, 202, 202);
+    border: 1px solid rgb(202, 202, 202);
+    cursor: pointer;
+}
+
+.searchBox {
+    width: 960px;
+    /* height: 147px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.type {
+    height: 39px;
+    width: 960px;
+    padding-top: 13px;
+    border-bottom: 1px solid rgb(235, 236, 235);
+}
+
+.single {
+    width: 89px;
+    height: 30px;
+    background-image: url(../img/btn-blue.png);
+    background-size: 100% 100%;
+    border-radius: 100px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    /* margin-top: 15px; */
+    float: left;
+}
+
+.double {
+    width: 89px;
+    height: 30px;
+    background-color: rgb(216, 216, 216);
+    border-radius: 100px;
+    line-height: 30px;
+    text-align: center;
+    color: rgb(152, 152, 152);
+    font-size: 12px;
+    margin-left: 14px;
+    float: left;
+}
+
+.double:hover {
+    background-image: url(../img/btn-blue.png);
+    background-size: 100% 100%;
+    color: white;
+}
+
+.sline {
+    height: 40px;
+    width: 960px;
+    padding-bottom: 40px;
+    margin-top: 11px;
+}
+
+.dcityName {
+    /* border: none; */
+    border-radius: 100px;
+    width: 150px;
+    height: 30px;
+    border: 1px dashed rgb(214, 214, 214);
+    margin-top: 6px;
+    padding-left: 12px;
+    font-size: 13px;
+    color: gray;
+    outline: none;
+}
+
+.change {
+    background-image: url(../img/change.jpg);
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+    float: left;
+    border: none;
+    cursor: pointer;
+    margin: 14px;
+    margin-top: 8px;
+}
+
+.tcityName {
+    /* border: none; */
+    border-radius: 100px;
+    width: 150px;
+    height: 30px;
+    border: 1px dashed rgb(214, 214, 214);
+    margin-top: 6px;
+    padding-left: 12px;
+    font-size: 13px;
+    color: gray;
+    outline: none;
+}
+
+.fightDate {
+    border-radius: 100px;
+    width: 150px;
+    height: 30px;
+    border: 1px dashed rgb(214, 214, 214);
+    margin-top: 6px;
+    padding-left: 12px;
+    font-size: 13px;
+    color: gray;
+    outline: none;
+    margin-left: 17px;
+}
+
+.slineR {
+    width: 150px;
+    height: 38px;
+    background-image: url(../img/btn-orange.png);
+    background-size: 100% 100%;
+    float: right;
+    color: white;
+    text-align: center;
+    line-height: 38px;
+    font-size: 15px;
+}
+
+.noFight {
+    width: 770px;
+    height: 90px;
+    /* margin: 0 auto; */
+    float: left;
+    margin-top: 5px;
+    padding-top: 20px;
+    background-color: rgb(199, 228, 252);
+}
+
+.icon4 {
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/jinggao.png);
+    background-size: 100% 100%;
+    margin-left: 65px;
+    position: absolute;
+    margin-top: 4px;
+    margin-right: 50px;
+}
+
+.words {
+    margin-left: 200px;
+    margin-top: 6px;
+}
+
+.lr {
+    width: 1000px;
+    /* height: auto; */
+    background-color: greenyellow;
+    margin: 0 auto;
+    /* float: left; */
+}
+
+.lrr {
+    width: 192px;
+    height: 94px;
+    background-color: rgb(252, 232, 206);
+    float: right;
+    padding: 12px 8px;
+    margin-top: 15px;
+    border-top: 5px solid rgb(239, 140, 63);
+    /* border-bottom: 5px solid rgb(239,140,63); */
+    /* text-align: center; */
+}
+
+.icon5 {
+    background-image: url(../img/jinggao-2.png);
+    background-size: 100% 100%;
+    width: 40px;
+    height: 40px;
+    margin-left: 75px;
+}
+
+.lrr2 {
+    width: 192px;
+    height: 135px;
+    background-color: rgb(252, 232, 206);
+    float: right;
+    padding: 12px 8px;
+    border-top: 5px solid rgb(239, 140, 63);
+    /* border-bottom: 5px solid rgb(239,140,63); */
+    /* text-align: center; */
+}
+
+.order {
+    /* width: 3000px; */
+    height: 60px;
+    overflow: hidden;
+    background-color: rgb(23, 62, 102);
+    margin-top: 85px;
+    /* left: 0px; */
+    /* position: absolute; */
+    left: 0px;
+}
+
+.lline {
+    /* background-size: 100% 100%; */
+    background-image: url(../img/ticket_progress.png);
+    width: 1000px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    margin: 0 auto;
+}
+
+.llline {
+    float: left;
+    height: 60px;
+    padding-left: 120px;
+    width: 70px;
+    font-size: 12px;
+    line-height: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+.llline2 {
+    float: left;
+    height: 60px;
+    padding-left: 120px;
+    width: 70px;
+    font-size: 12px;
+    line-height: 60px;
+    color: rgb(46, 102, 168);
+    cursor: pointer;
+}
+
+.show1 {
+    /* margin-top: 100px; */
+    height: 520px;
+    background-color: white;
+    margin: 0 auto;
+    clear: both;
+    /* position: absolute; */
+    /* float: left; */
+}
+
+.aboutUs {
+    width: 1000px;
+    height: 500px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+}
+
+.fucku {
+    width: 640px;
+    height: 500px;
+}
+
+.title {
+    color: rgb(22, 51, 92);
+    font-size: 17px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(209, 221, 232);
+    margin-top: 20px;
+}
+
+.blists {
+    width: 640px;
+    height: 56px;
+    /* background-color: gold; */
+}
+
+.itt {
+    float: left;
+    margin-right: 12px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: rgb(135, 162, 192);
+    cursor: pointer;
+}
+
+.itt:hover {
+    color: rgb(242, 156, 72);
+}
+
+.icon6 {
+    width: 91px;
+    height: 23px;
+    /* margin-bottom: 8px; */
+    background-image: url(../img/logg.jpg);
+    background-size: 100% 100%;
+    float: left;
+    margin-left: 5px;
+}
+
+.conUs {
+    height: 110px;
+    background-image: url(../img/bottom.jpg);
+    background-size: 100% 100%;
+    padding-top: 65px;
+    /* text-align: center; */
+}
+
+.email1 {
+    color: rgb(21, 48, 101);
+    font-size: 33px;
+    float: left;
+    margin-right: 40px;
+}
+
+.phone1 {
+    color: rgb(21, 48, 101);
+    font-size: 33px;
+    float: left;
+    margin-right: 70px;
+}
+
+.bott {
+    height: 65px;
+    background-color: rgb(7, 31, 53);
+    color: rgb(239, 241, 242);
+    line-height: 65px;
+    font-size: 12px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.icon7 {
+    background-size: 100% 100%;
+    background-image: url(../img/police.png);
+    width: 15px;
+    height: 15px;
+    float: right;
+    margin-top: 24px;
+    margin-right: 13px;
+}
+
+.bLeft {
+    width: 200px;
+    height: 170px;
+    background-color: white;
+    float: left;
+}
+
+.bRight {
+    width: 780px;
+    height: 170px;
+    background-color: white;
+    float: right;
+    margin-left: 20px;
+}
+
+.heaa {
+    margin-top: 16px;
+    padding-bottom: 3px;
+    height: 25px;
+    line-height: 20px;
+    border-bottom: 1px solid rgb(211, 219, 233);
+    padding-bottom: 10px;
+    width: 169px;
+}
+
+.heel {
+    color: rgb(62, 91, 139);
+    font-size: 16px;
+    height: 25px;
+    width: 200px;
+    /* margin-top: 10px; */
+    line-height: 25px;
+    /* position: absolute; */
+}
+
+.heel2 {
+    color: rgb(62, 91, 139);
+    font-size: 10px;
+    margin-top: 4px;
+    height: 14px;
+    line-height: 14px;
+}
+
+.re {
+    float: left;
+    font-size: 10px;
+    height: 12px;
+    margin-right: 17px;
+    background-image: url(../img/btn-blue.png);
+    background-size: 100% 100%;
+    border-radius: 100px;
+    width: 75px;
+    height: 25px;
+    color: white;
+    line-height: 24px;
+    text-align: center;
+}
+
+.log {
+    float: left;
+    font-size: 10px;
+    height: 12px;
+    background-image: url(../img/btn-orange.png);
+    background-size: 100% 100%;
+    border-radius: 100px;
+    width: 75px;
+    height: 25px;
+    color: white;
+    line-height: 24px;
+    text-align: center;
+}
+
+.tt {
+    width: 240px;
+    height: 68px;
+    float: left;
+    margin-right: 20px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    /* background-color: #008000; */
+}
+
+.ttb {
+    color: rgb(205, 205, 205);
+    font-size: 12px;
+    height: 16px;
+    margin-top: 12px;
+    line-height: 19px;
+}
+
+.tth {
+    height: 17px;
+    line-height: 17px;
+    color: rgb(62, 91, 139);
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgb(211, 219, 233);
+}
